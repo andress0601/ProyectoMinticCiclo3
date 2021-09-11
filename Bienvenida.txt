@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 Bienvenidos
 Restaurante "  "
 Coordialmente apertura.
+=======
+Bienvenidos
+Restaurante "  "
+Coordialmente apertura.
+>>>>>>> 122ea4d0fc84ecf3f621f158f63d1bd82395bb00
