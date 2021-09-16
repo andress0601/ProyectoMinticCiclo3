@@ -11,15 +11,121 @@
     <title>Carrito Compras</title>
 </head>
 <body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="listadoproductos.html">Lista de productos</a></li>    
+         
+            <li><a href="">Ingresar-Cliente</a></li>
+            <li>
+                <a href="Carrito_compras.html">Carrito compras</a>
+            </li>
+            <li>
+                <a href="Proceso_Compra.html">Categorias</a>
+            </li>
+        </ul>
+    </nav>
+
     <header>
-    <h1>
-        <img width="256px" src="https://crustier-twists.000webhostapp.com/imagenes/propuesta.png" 
-              alt="Logo_restaurante"/>
-    </h1>
+        <h1>
+            <img width="176px" src="https://crustier-twists.000webhostapp.com/imagenes/propuesta.png"
+            alt="Logo_restaurante"/>
+            Tabla de validación
+        </h1>
+        <nav>
+            <img width="80px" src="https://image.flaticon.com/icons/png/512/118/118042.png"/>
+            <img width="80px" src="https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_960_720.png"/>
+        </nav>
     </header>
-    
-    <h1>Mis compras</h1>
-    <a href="Proceso Compra.html">Regresar</a>
-    
+    <main>
+        <h2>Carro de compras</h2>
+        <h3>Productos</h3>
+        <h3>Mi cuenta</h3>
+        <h3>Subtotal</h3>
+        <h3>Descuentos</h3>
+        <h3>Envio domicilio</h3>
+    </main>
+
+    <h2>Imagenes</h2>
+
+    <h2>Tabla de validacion</h2>
+    <table border="1" width="400px">
+        <thead>
+            <tr>
+                <th>Referencia</th>
+                <th>N. Producto</th>
+                <th>Cantidad</th>
+                <th>Valor por Unidad</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img width="176px" src="https://i1.wp.com/surtidoradeaves.com/wp-content/uploads/IMG/18A/25T212751.727.png?resize=750%2C500&ssl=1" ></td>
+                <td>Pollo Asado</td>
+                <td>1</td>
+                <td>$24000 </td>
+                <td>$24000 </td>
+            </tr>
+            <tr>
+                <td><img width="176px" src="https://cdn.colombia.com/gastronomia/2011/08/02/bandeja-paisa-1616.gif"></td>
+                <td>Bandeja Paisa</td>
+                <td>2</td>
+                <td>$25000 UND</td>
+                <td>$50000</td>
+            </tr>
+            <tr>
+                <td><img width="176px" src="https://cloudfront-us-east-1.images.arcpublishing.com/radiomitre/QS4FX6GD4FEGDMMZSUYAQWTDKY.jpg"></td>
+                <td>Lulada</td>
+                <td>4</td>
+                <td>$8000 UND</td>
+                <td>$32000</td>
+            </tr>
+            <tr>
+                <td><img width="176px" src="https://img-global.cpcdn.com/recipes/7e9561ebcd80ac0b/1200x630cq70/photo.jpg"></td>
+                <td>Ajiaco</td>
+                <td>2</td>
+                <td>$22000 UND</td>
+                <td>$44000</td>
+            </tr>
+            <tr>
+                <td><img width="176px" src="https://www.cocina-colombiana.com/base/stock/Recipe/271-image/271-image_web.jpg"></td>
+                <td>Muchacho rellenos</td>
+                <td>1</td>
+                <td>$16000 UND</td>
+                <td>$16000</td>
+            </tr>
+            <tr>
+                <td><img width="176px" src="https://recetas123.net/wp-content/uploads/sancocho-de-gallina2.jpg"></td>
+                <td>Sancocho de gallina</td>
+                <td>3</td>
+                <td>$25000 UND</td>
+                <td>$75000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="4">Total Compras</th>
+                <th>$241000</th>
+            </tr>
+        </tfoot>
+    </table>
+    <h2>Formularios</h2>
+    <label for="producto">Producto</label>
+            <select name="producto">
+                <option value="-1">Seleccione un producto</option>
+                <option value="1">Pollo Asado</option>
+                <option value="2">Bandeja Paisa</option>
+                <option value="3">lulada</option>
+                <option value="4">Ajiaco</option>
+                <option value="2">Muchaco relleno</option>
+                <option value="3">Sancocho de gallina</option>
+            </select>
+    <label for="cantidad">Cantidad</label>
+    <input type="number" name="cantidad" placeholder="Escriba la cantidad">
+    <input type="submit" name="Validar" value="validar">
+            
+
 </body>
 </html>
