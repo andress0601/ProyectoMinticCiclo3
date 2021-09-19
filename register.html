@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTER</title>
+
+</head>
+
+<body>
+    <form action="#" method="POST">
+        <img width="256px" src="imgLoginRegister/logoRest.PNG" alt="Logo">
+        <br>
+        <img width="256px" src="imgLoginRegister/comida tipica.jpg" alt="Fondo">
+        <br>
+        <img width="256px" src="imgLoginRegister/imagenLogin.PNG" alt="imgLogin">
+        <h1>REGISTRO</h1>
+
+        <label for="nombres">Nombres</label>
+        <br>
+        <input required type="text" name="nombres" placeholder="Escriba su nombre" />
+        <br><br>
+        <label for="apellido">Apellidos</label>
+        <br>
+        <input required type="text" name="apellido" placeholder="Escriba su apellido" />
+        <br><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo documento</th>
+                    <th>No documento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <select name="tdocu">
+                            <option value="-1">Seleccione su tipo de documento</option>
+                            <option value="1">Cedula</option>
+                            <option value="2">Cedula Extranjera</option>
+                            <option value="3">Pasaporte</option>
+                            <option value="4">Tarjeta de Identidad</option>
+                        </select>
+                    </td>
+                    <td><input required type="text" name="ndocu" placeholder="Escriba su numero de documento" /></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <label for="correo">Correo Electrónico</label>
+        <br>
+        <input required type="text" name="correo" placeholder="Escriba su correo electrónico" />
+        <br><br>
+        <label for="teléfono">Teléfono</label>
+        <br>
+        <input required type="text" name="teléfono" placeholder="Escriba su Número telefónico" />
+        <br><br>
+        <input type="submit" name="registrarse" value="Registrarse">
+    </form>
+</body>
+
+
+
+
+</html>
