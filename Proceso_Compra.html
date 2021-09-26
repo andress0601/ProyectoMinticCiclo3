@@ -2,87 +2,93 @@
 
 <html>
 
-<head>
-    <title>Proceso Compras</title>
+<head >
+    <title>Proceso Compras111</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
     <link rel="shortcut icon" href="https://crustier-twists.000webhostapp.com/imagenes/sopa.png"
         type="image/vnd.microsoft.icon" />
+    
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
 </head>
 
-<body>
-    <header>
-        <h1>
-            <img width="256px" src="https://crustier-twists.000webhostapp.com/imagenes/propuesta.png"
-                alt="Logo_restaurante" />
-
-        </h1>
-
-    </header>
-
+<body class="grid grid-cols-1 md:bg-blue-200 lg:bg-blue-500 lg:grid-cols-5 gap-8 lg:mx-8 lg:p-20">
     <nav>
         <ul>
             <li><a href="index.html">Menu</a></li>
             <li><a href="Estructura_reserva.html">Reservación</a></li>
+
            
-            <!-- <li><a href="">Ingresar-Cliente</a></li> -->
             <li>
                 <a href="Carrito_compras.html">Carrito compras</a>
             </li>
             <li>
                 <a href="Proceso_Compra.html">Categorias</a>
-
             </li>
             <li><a href="login.html">Login</a></li>
             <li><a href="register.html">Registro</a></li>
+
         </ul>
     </nav>
+    <header class= "lg:col-span-5 lg:grid-cols-5  ">
+    
+            <!-- <div class="lg:col-span-5 lg:mx-8 lg:mr-8 lg:p-4
+                lg:col-span-5 "> -->
+                <div class="static">
+                    <div class="bg-light-blue-600 opacity-50 ">
+                    <p>
+                        <img  class=" object-fill h-36 w-full " src="estructura_menu/fondos/f-menu.jpg"
+                        alt="emcabezado"/>
+                        
+                        
+                    </p>
+                    
+                 </div>
+                        
+                        <div class="absolute bottom-104 left-32 ">
 
-    <main>
-        <h1>
-            Menu de Productos
-        </h1>
-        <ul>
-            <li>
-                <form action="PlatosFuertes.html">
-                    <input type="submit" value="Platos Fuertes" />
-                </form>
-                <!-- <button onclick="index.html" type="button" name="seleccionar" >Platos Fuertes</button> -->
-            </li>
+                          <p>
+                            <img class=" object-left-top  w-60 h-24 " src="https://crustier-twists.000webhostapp.com/imagenes/propuesta.png"
+                            alt="Logo_restaurante" />
+                          </p>
+
+                        </div>
+                     
+                </div>
+                    
+                    
+
+    </header>
+    <main class=" lg:col-span-5 grid grid-cols-1 lg:grid-cols-5 gap-4"><!--Contenido principal, organizo con div y class-->
+        
+        <div class="imagenes">
+        <img src="estructura_menu/fondos/otro fondo.jpg" alt="emcabezado categorias">
+        </div>
+        <div class="imagenes">
+            <img src="estructura_menu/fondos/otro fondo.jpg" alt="emcabezado categorias">
+            </div>
+
+        <div class="imagenes">
+            <img src="estructura_menu/fondos/otro fondo.jpg" alt="emcabezado categorias">
+            </div>
+
+        <div class="imagenes">
+            <img src="estructura_menu/fondos/otro fondo.jpg" alt="emcabezado categorias">
+            </div>
+
+        <div class="imagenes">
+            <img src="estructura_menu/fondos/otro fondo.jpg" alt="emcabezado categorias">
+            </div>
+        <!-- <div class="h-64 grid grid-rows-3 grid-flow-col-span-1 gap-4">
+            <div><img src="estructura_menu/fondos/otro fondo.jpg" alt="emcabezado categorias"></div>
+            <div><img src="estructura_menu/fondos/otro fondo.jpg" alt="emcabezado categorias"></div>
+            <div><img src="estructura_menu/fondos/otro fondo.jpg" alt="emcabezado categorias"></div>
             
-            <li>
-                <form action="Entradas.html">
-                    <input type="submit" value="Entradas" />
-                </form>
-            </li>
-            <li>
-                <form action="Adicionales.html">
-                    <input type="submit" value="Adicionales" />
-                </form>
-                
-            </li>
-            <li>
-                <form action="Bebidas.html">
-                    <input type="submit" value="Bebidas" />
-                </form>
-               
-            </li>
-            <li>
-                <form action="Especiales.html"><!-- proceso, me permite añadir un enlace al botón, de tal manera le doy click y me redirige-->
-                    <input type="submit" value="Especiales" />
-                </form>
-            </li>
-
-        </ul>
-       
-
-        <br><br>
-       
-
-
-
+          </div> -->
 
     </main>
+   
 </body>
 
 </html>
