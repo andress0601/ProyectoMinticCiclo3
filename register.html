@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>REGISTER</title>
-
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <nav>
+<body class="bg-cover bg-center" style="background-image: url('imgLoginRegister/comida tipica.jpg');">
+    <!--<nav>
         <ul>
             <li><a href="index.html">Menu</a></li>
             <li><a href="Estructura_reserva.html">Reservación</a></li>
 
-            <!-- <li><a href="">Ingresar-Cliente</a></li> -->
+            <li><a href="">Ingresar-Cliente</a></li> 
             <li>
                 <a href="Carrito_compras.html">Carrito compras</a>
             </li>
@@ -23,25 +23,31 @@
             <li><a href="login.html">Login</a></li>
             <li><a href="register.html">Registro</a></li>
         </ul>
-    </nav>
+    </nav>-->
 
-    <form action="#" method="POST">
-        <img width="256px" src="imgLoginRegister/logoRest.PNG" alt="Logo">
+    <form action="#" method="POST" class="bg-no-repeat bg-blue-300 text-center mx-96 my-48 bg-top bg-origin-content" style="background-image: url('imgLoginRegister/imagenLogin.PNG'); padding-top: 10px; padding-left: 10px;">
+        <img width="100px" src="imgLoginRegister/logoRest.PNG" alt="imgLogin">
         <br>
-        <img width="256px" src="imgLoginRegister/comida tipica.jpg" alt="Fondo">
         <br>
-        <img width="256px" src="imgLoginRegister/imagenLogin.PNG" alt="imgLogin">
+        <br>
+        <br>
+        <br>
+        <br>
         <h1>REGISTRO</h1>
 
         <label for="nombres">Nombres</label>
         <br>
+        <br>
         <input required type="text" name="nombres" placeholder="Escriba su nombre" />
-        <br><br>
+        <br>
+        <br>
         <label for="apellido">Apellidos</label>
         <br>
+        <br>
         <input required type="text" name="apellido" placeholder="Escriba su apellido" />
-        <br><br>
-        <table>
+        <br
+        ><br>
+        <table align="center">
             <thead>
                 <tr>
                     <th>Tipo documento</th>
