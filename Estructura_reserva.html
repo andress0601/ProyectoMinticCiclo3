@@ -62,81 +62,159 @@
                 <p class="text-center"><img width="288px" src="https://crustier-twists.000webhostapp.com/imagenes/propuesta.png"
                 alt="Logo_restaurante"/></p>
                 <p class="text-center">GRACIAS POR ELEGIR NUESTROS PRODUCTOS</p>
+                <div class="fst-italic">
+                    <div class="text-center">
+                            <h3>Recuerda que nuestro horario de atencion es de 11am a 4pm</h3>
+                    </div>
+                </div >
             </h1>
         </header>
-        <main>
+        <main >
             <div class="modal fade" id="EjemploModal" tabindex="-1" role="dialog" aria-labelledby="EjemploModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="EjemploModalLabel">Titulo</h5>
+                        <div style="background-color: #4F9DA6;" class="modal-header">
+                        <h2  class="modal-title" id="EjemploModalLabel">Tu Compra</h2>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
                         </div>
                         <div class="modal-body">
-                            <form action="#" method="post">
-                                <h3> 1.Horario Restaurante abierto</h3> 
-                                <br>
-                                <label for="fecha">Fecha</label>
-                                <input type="date" name="fecha"/>
-                                <br><br>
-                                <button type="button" name="selección horario">11am-4pm</button>
-                                <select name="Horario">
-                                <option value="-1">selecciona un horario</option>
-                                <option value="-1">11am -12pm</option>
-                                <option value="-1">12pm -1pm</option>
-                                <option value="-1">2pm -3pm</option>
-                                <option value="-1">3pm -4pm</option>
+                        <form action="#" method="post" >
+                            <h3>Confirma tu compra </h3> 
+                            <br>
+                            <label>Selecciona un horario en el que quieras recibir tu pedido:</label>
+                            <select>
+                            <option value="-1">Horario disponible</option>
+                            <option value="-1">11am -12pm</option>
+                            <option value="-1">12pm -1pm</option>
+                            <option value="-1">2pm -3pm</option>
+                            <option value="-1">3pm -4pm</option>
+                            </select>
+
+                            <br><br>
+                            <label for="cliente">Selecciona la ciudad donde te encuentras:</label>
                             
-                                </select>
-                                <label for="cliente">Dirección para el domicilio </label>
-                                <input  required type="text" name="Dirección" placeholder="Escribe tu ubicación"/>
-                            </form>
+                            <select>
+                            <option value="-1">Elige tu destino</option>
+                            <option value="-1">Bogotá</option>
+                            <br><br>
+                            </select>
+                            <br><br>
+                            <label for="cliente">Selecciona la localidad:</label>
+                            <select>
+                            <option value="-1">Localidades</option>
+                            <option value="1">Usaquén</option>
+                            <option value="2">Chapinero</option>
+                            <option value="3">Santa Fe</option>
+                            <option value="4">San Cristobal</option>
+                            <option value="5">Usme</option>
+                            <option value="6">Tunjuelito</option>
+                            <option value="7">Bosa</option>
+                            <option value="8">Kennedy</option>
+                            <option value="9">Fontibón</option>
+                            <option value="10">Engativá</option>
+                            <option value="11">Suba</option>
+                            <option value="12">Barrios Unidos</option>
+                            <option value="13">Teusaquillo</option>
+                            <option value="14">Los Mártires</option>
+                            <option value="15">Antonio Nariño</option>
+                            <option value="16">Puente Aranda</option>
+                            <option value="17">La candenlaria</option>
+                            <option value="18">Rafael Uribe Uribe</option>
+                            <option value="19">Ciudad Bolivar</option>
+                            <option value="20">Sumapaz</option>
+                        </select>
+                        <br><br>
+                        <label for="cliente">Dirección para el domicilio </label>
+                        <input  required type="text" name="Dirección" placeholder="Escribe tu ubicación"/>
+                        <br><br>
+                        <label for="number">Telefono de contacto</label>
+                        <input type="tel" name="cantidad" placeholder="Escriba el número">
+                    </form>
                         </div>
-                        <div class="modal-footer">
+                        <div class="modal-footer" >
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-primary">Guardar</button>
+                            <a class="btn btn-primary" href="Compra_realizada.html" role="button">Guardar</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <button type="button" data-toggle="modal" data-target="#EjemploModal">Confirmar Compra</button>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#EjemploModal">Confirmar Compra</button>
+            </div>
+            
             
             <div class="modal fade" id="Reserva" tabindex="-1" role="dialog" aria-labelledby="EjemploModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="EjemploModalLabel">Titulo</h5>
+                        <div style="background-color: #FF5959;" class="modal-header">
+                        <h2  class="modal-title" id="EjemploModalLabel">Tu reserva</h2>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
                         </div>
-                        <div class="modal-body">
-                            <br><br>
-            <h3>2. Deja tu reserva si deseas recibir tu pedido en otro horario</h3>
+                        <div class="modal-body">                      
+            <h2>Deja tu reserva si deseas recibir tu pedido en otro horario</h2>
             <label for="fecha">Fecha</label>
             <input type="date" name="fecha"/>
-            <br><br>
+            <br>
                 <label for="envio">Tipo de envio</label>
                 <input type="radio" name="reserva" value="M"> Jornada mañana<!--N o E me representa lo que selecciono-->
                 <input type="radio" name="reserva" value="T"> Jornada Tarde<!-- Al ser el mismo nombre garantizo que solo pueda escoger uno solo a la vez-->
-                <br><br>
+
+                <label for="cliente">Selecciona la ciudad donde te encuentras</label>
+                <select>
+                    <option value="-1">Elige tu destino</option>
+                    <option value="-1">Bogotá</option>
+                </select>
+                <label for="cliente">Selecciona la localidad</label>
+                <select>
+                    <option value="-1">Localidades</option>
+                    <option value="1">Usaquén</option>
+                    <option value="2">Chapinero</option>
+                    <option value="3">Santa Fe</option>
+                    <option value="4">San Cristobal</option>
+                    <option value="5">Usme</option>
+                    <option value="6">Tunjuelito</option>
+                    <option value="7">Bosa</option>
+                    <option value="8">Kennedy</option>
+                    <option value="9">Fontibón</option>
+                    <option value="10">Engativá</option>
+                    <option value="11">Suba</option>
+                    <option value="12">Barrios Unidos</option>
+                    <option value="13">Teusaquillo</option>
+                    <option value="14">Los Mártires</option>
+                    <option value="15">Antonio Nariño</option>
+                    <option value="16">Puente Aranda</option>
+                    <option value="17">La candenlaria</option>
+                    <option value="18">Rafael Uribe Uribe</option>
+                    <option value="19">Ciudad Bolivar</option>
+                    <option value="20">Sumapaz</option>
+                </select>
                 
                 <label for="cliente">Dirección para el domicilio </label>
                 <input  required type="text" name="Dirección" placeholder="Escribe tu ubicación"/>
-            
+                <label for="cliente">Modalidad de pago </label>
+                <input type="radio" name="reserva" value="C"> Contra entrega
+                <input type="radio" name="reserva" value="T"> Tarjeta debito o credito
+                <label for="number">Telefono de contacto</label>
+                <input type="tel" name="cantidad" placeholder="Escriba el número">
+                
+
+              
                 <br><br>
                         </div>
-                        <div class="modal-footer">
+                        <div class="modal-footer" >
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Guardar</button>
+                        <a class="btn btn-primary" href="Reserva_confirmada.html" role="button">Guardar</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <button type="button" data-toggle="modal" data-target="#Reserva">Reservar</button>
-            
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="button" data-toggle="modal" data-target="#Reserva" class="btn btn-outline-danger">Reservar</button>
+              </div>
         </main>
     </body>
 </html>
