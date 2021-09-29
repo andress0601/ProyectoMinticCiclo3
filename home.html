@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<head>
+<head >
     <meta charset="UTF-8">
-    <title>REGISTER</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://crustier-twists.000webhostapp.com/imagenes/sopa.png" type="image/x-icon">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>MENU</title>
 
-    <nav >
+      <!--class=" bg-gray-800"-->
+      <nav >
         <div class="max-w-7xl mx-auto  ">
           <div class="relative flex items-center justify-between h-16">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -54,7 +58,7 @@
                 <div class="flex space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                   <a href="home.html" class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    aria-current="page">Menu</a>
+                    aria-current="page">Menú</a>
     
                   <a href="login.html"
                     class="  text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Login</a>
@@ -106,72 +110,137 @@
               <!-- Mobile menu, show/hide based on menu state. -->
               
       </nav>  
-    
-   
-
+    </div><img class=" object-left-top gap-4 w-60 h-24 " src="https://crustier-twists.000webhostapp.com/imagenes/propuesta.png"
+    alt="Logo_restaurante" /></div>    
+     
 </head>
 
-<body class="bg-cover bg-center" style="background-image: url('imgLoginRegister/comida tipica.jpg');">
+
+
+<body class=" bg-fixed bg-cover bg-center bg-no-repeat h-768 w-full lg:p-8"
+    style="background-image: url(estructura_menu/fondos/menu-art.jpg)">
+
+   
+
+      
+          
+        
+   
     
 
-    <form action="#" method="POST" class="bg-no-repeat bg-blue-300 text-center mx-96 my-48 bg-top bg-origin-content" style="background-image: url('imgLoginRegister/imagenLogin.PNG'); padding-top: 10px; padding-left: 10px;">
-        <img width="100px" src="imgLoginRegister/logoRest.PNG" alt="imgLogin">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h1>REGISTRO</h1>
-
-        <label for="nombres">Nombres</label>
-        <br>
-        <br>
-        <input required type="text" name="nombres" placeholder="Escriba su nombre" />
-        <br>
-        <br>
-        <label for="apellido">Apellidos</label>
-        <br>
-        <br>
-        <input required type="text" name="apellido" placeholder="Escriba su apellido" />
-        <br
-        ><br>
-        <table align="center">
-            <thead>
-                <tr>
-                    <th>Tipo documento</th>
-                    <th>No documento</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <select name="tdocu">
-                            <option value="-1">Seleccione su tipo de documento</option>
-                            <option value="1">Cedula</option>
-                            <option value="2">Cedula Extranjera</option>
-                            <option value="3">Pasaporte</option>
-                            <option value="4">Tarjeta de Identidad</option>
-                        </select>
-                    </td>
-                    <td><input required type="text" name="ndocu" placeholder="Escriba su numero de documento" /></td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <label for="correo">Correo Electrónico</label>
-        <br>
-        <input required type="text" name="correo" placeholder="Escriba su correo electrónico" />
-        <br><br>
-        <label for="teléfono">Teléfono</label>
-        <br>
-        <input required type="text" name="teléfono" placeholder="Escriba su Número telefónico" />
-        <br><br>
-        <input type="submit" name="registrarse" value="Registrarse">
-    </form>
-</body>
+    <header class=" lg:mx-8 lg:p-4">
+      
+  
 
 
 
+        <h1 style="font-size: 60pt;" class="text-white text-center "> MENÚ
+
+        </h1>
+
+    </header>
+
+    <main class=" grid grid-cols-1  lg:p-8">
+
+
+
+        <div class=" bg-no-repeat  lg:grid grid-cols-5  gap-4">
+
+            
+
+            <div class="ml-18 ...">
+                
+                <li>
+
+                <form class="lg:col-span-2 grid grid-cols-0.5 lg:grid-cols-2 lg:p-2 " action="PlatosFuertes.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="PLATOS FUERTES +" />
+
+                </form>
+
+                </li><img class=""
+                src="estructura_menu/fondos/otro fondo.jpg"
+                alt="Platos fuertes">
+
+                
+            </div>
+
+
+            <div class="ml-18 ...">
+                
+                <li>
+
+                <form class="lg:col-span-2 grid grid-cols-0.5 lg:grid-cols-2 lg:p-2 " action="Entradas.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="ENTRADAS +" />
+
+                </form>
+
+                </li><img class=""
+                src="estructura_menu/fondos/otro fondo.jpg"
+                alt="ENTRADAS">
+
+                
+            </div>
+
+            <div class="ml-18 ...">
+                
+                <li>
+
+                <form class="lg:col-span-2 grid grid-cols-0.5 lg:grid-cols-2 lg:p-2 " action="Adicionales.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="ADICIONALES +" />
+
+                </form>
+
+                </li><img class=""
+                src="estructura_menu/fondos/otro fondo.jpg"
+                alt="ADICIONALES">
+
+                
+            </div>
+
+            <div class="ml-18 ...">
+                
+                <li>
+
+                <form class="lg:col-span-2 grid grid-cols-0.5 lg:grid-cols-2 lg:p-2 " action="Bebidas.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="BEBIDAS+" />
+
+                </form>
+
+                </li><img class=""
+                src="estructura_menu/fondos/otro fondo.jpg"
+                alt="BEBIDAS">
+
+                
+            </div>
+
+            <div class="ml-18 ...">
+                
+                <li>
+
+                <form class="lg:col-span-2 grid grid-cols-0.5 lg:grid-cols-2 lg:p-2 " action="Especiales.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="ESPECIALES +" />
+
+                </form>
+
+                </li><img class=""
+                src="estructura_menu/fondos/otro fondo.jpg"
+                alt="ESPECIALES">
+
+                
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+    </body>
 
 </html>

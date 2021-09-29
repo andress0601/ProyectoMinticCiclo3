@@ -6,263 +6,692 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://crustier-twists.000webhostapp.com/imagenes/sopa.png" type="image/x-icon">
-    <title>Bebidas</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>BEBIDAS</title>
+
+    <!--class=" bg-gray-800"-->
+    <nav >
+        <div class="max-w-7xl mx-auto  ">
+          <div class="relative flex items-center justify-between h-16">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button type="button"
+                class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                aria-controls="mobile-menu" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <!--
+                  Icon when menu is closed.
+      
+                  Heroicon name: outline/menu
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <!--
+                  Icon when menu is open.
+      
+                  Heroicon name: outline/x
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+              <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
+              <span class="font-semibold text-xl tracking-tight">El sabor de mi tierra</span>
+            </div>
+
+            <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+              <div class="flex-shrink-0 flex items-center">
+                <!-- <img class="block lg:hidden h-8 w-auto" src=" -->
+                 <!-- <img class="hidden lg:block h-8 w-auto"
+                  src="https://crustier-twists.000webhostapp.com/imagenes/propuesta.png" alt="Logo_restaurante"> --> 
+              </div>
+              <div class="hidden sm:block sm:ml-6">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a href="home.html" class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    aria-current="page">Menu</a>
+    
+                  <a href="login.html"
+                    class="  text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Login</a>
+    
+                  <a href="register.html"
+                    class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Registro</a>
+    
+                  <a href="Estructura_reserva.html"
+                    class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reservación</a>
+    
+    
+                  <a href="Carrito_compras.html"
+                    class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"> Ver Carrito</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                  
+              </svg>
+            </button> -->
+    
+            <!-- Profile dropdown -->
+            <div class="ml-3 relative">
+              
+                
+    
+              <!-- <div>
+                <button type="button"
+                  class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                  id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                  <span class="sr-only">Open user menu</span>
+                  <img class="h-8 w-8 rounded-full"
+                    src="estructura_menu/usario icono.png"
+                    alt="">
+                </button>
+              </div> -->
+    
+              <!--
+                 
+              -->
+            </div>
+          </div>
+        </div> 
+    
+              <!-- Mobile menu, show/hide based on menu state. -->
+              
+      </nav>  
+    </div><img class=" object-left-top gap-4 w-60 h-24 " src="https://crustier-twists.000webhostapp.com/imagenes/propuesta.png"
+    alt="Logo_restaurante" /></div>    
+     
+   
+
 </head>
 
-<body>
-    <nav>
-        <ul>
-            
-            <li><a href="Estructura_reserva.html">Reservación</a></li>
 
-           
-            <li>
-                <a href="Carrito_compras.html">Carrito compras</a>
-            </li>
-            <li>
-                <a href="Proceso_Compra.html">Categorias</a>
-            </li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="register.html">Registro</a></li>
+<body class=" bg-fixed bg-cover bg-center bg-no-repeat h-768 w-full  lg:p-8"
+    style="background-image: url(estructura_menu/fondos/menu-art.jpg)">
 
-        </ul>
-    </nav>
 
-    <header>
-        <h1>
-            <img width="176px" src="https://crustier-twists.000webhostapp.com/imagenes/propuesta.png"
-            alt="Logo_restaurante"/>
-            
+    <header class=" lg:mx-8 lg:p-8">
+
+        <h1 style="font-size: 60pt;" class="text-white text-center "> BEBIDAS
+
         </h1>
-        <h1>BEBIDAS</h1>
-        <h3>Seleccione su bebida para realizar su pedido</h3>
+
     </header>
 
-    <main>
+    <main class=" grid grid-cols-1  lg:p-8">
+
+
+
+        <div class=" bg-no-repeat md:grid grid-cols-1 lg:grid grid-cols-5  gap-4">
+
+
+
+            <div class="ml-18 ..."><img class=""
+                    src="estructura_menu/Bebidas/cristal gas.jpg"
+                    alt="Agua">
+                <h1 class="text-lefth text-yellow-500 text-lg">
+                    <p class="font-semibold">Agua Cristal con gas</p>
+                </h1>
+                <h1 class="text-lefth text-black text-x2">
+                    <p class="italic font-bold ">Precio:$1800</p>
+                </h1>
+
+                <li>
+
+                    <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                        <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                            value="AÑADIR +" />
+
+                    </form>
+
+                </li>
+
+            </div>
+            <div class="ml-18 ..."><img class=""
+                    src="estructura_menu/Bebidas/cristal.png"
+                    alt="Agua">
+                <h1 class="text-lefth text-yellow-500 text-lg">
+                    <p class="font-semibold">Agua Cristal</p>
+                </h1>
+                <h1 class="text-lefth text-black text-x2">
+                    <p class="italic font-bold ">Precio:$1200</p>
+                </h1>
+
+                <li>
+
+                    <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                        <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                            value="AÑADIR +" />
+
+                    </form>
+
+                </li>
+
+            </div>
+           
+            <div class="ml-18 ..."><img class=""
+                    src="estructura_menu/Bebidas/brisa manzana.jpg"
+                    alt="Agua">
+                <h1 class="text-lefth text-yellow-500 text-lg">
+                    <p class="font-semibold">Agua Manzana</p>
+                </h1>
+                <h1 class="text-lefth text-black text-x2">
+                    <p class="italic font-bold ">Precio:$2300</p>
+                </h1>
+
+                <li>
+
+                    <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                        <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                            value="AÑADIR +" />
+
+                    </form>
+
+                </li>
+
+            </div>
+
+            <div class="ml-18 ..."><img class=""
+              src="estructura_menu/Bebidas/aguapanela.jpg"
+              alt="Aguapanela">
+          <h1 class="text-lefth text-yellow-500 text-lg">
+              <p class="font-semibold">Aguapanela </p>
+          </h1>
+          <h1 class="text-lefth text-black text-x2">
+              <p class="italic font-bold ">Precio:$1800</p>
+          </h1>
+
+          <li>
+
+              <form class="lg:col-span-2 grid grid-cols-0.5 lg:grid-cols-2 " action="Carrito_compras.html">
+                  <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                      value="AÑADIR +" />
+
+              </form>
+
+          </li>
+
+      </div>
+
+            <div class="ml-18 ..."><img class=""
+                    src="estructura_menu/Bebidas/pony.jpg"
+                    alt="Pony">
+                <h1 class="text-lefth text-yellow-500 text-lg">
+                    <p class="font-semibold">Pony Malta 1.5</p>
+                </h1>
+                <h1 class="text-lefth text-black text-x2">
+                    <p class="italic font-bold ">Precio:$3000</p>
+                </h1>
+
+                <li>
+
+                    <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                        <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                            value="AÑADIR +" />
+
+                    </form>
+
+                </li>
+
+            </div>
+
+            
+
+            <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/coca cola.jpg"
+                alt="Cocacola">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Cocacola 1.5</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$3500</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-2 grid grid-cols-0.5 lg:grid-cols-2 " action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
+
+            <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/bebidas.jpg"
+                alt="Gaseosa">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Sprit,Cocacola,Fanta</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$6000</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-2 grid grid-cols-0.5 lg:grid-cols-2 " action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
+            <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/colombiana.jpg"
+                alt="Gaseosa">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Colombiana Postobon 1.5</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$3000</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-2 grid grid-cols-0.5 lg:grid-cols-2 " action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
+            <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/gaseosa_kola_postobon.png"
+                alt="Gaseosa">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Kola Postobon 1.5</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$3000</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-2 grid grid-cols-0.5 lg:grid-cols-2 " action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
+
+              <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/manza.jpg"
+                alt="Gaseosa">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Manzana Postobon 3lts</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$6000</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
+              <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/naranja.jpg"
+                alt="Gaseosa">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Naranja Postobon 1.5</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$3000</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
+              <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/uva.jpg"
+                alt="Gaseosa">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Uva Postobon 1.5</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$3000</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
         
-        <!--para que me ocupe dos espacios de fila y solo aparezca un nombre de juan, utilizo rowspan-->
-    
-       <img width="128px" height="120px"
-            src="https://cdn.shopify.com/s/files/1/0492/2458/1274/products/supermercados_la_vaquita_supervaquita_agua_cristal_600ml_bebidas_liquidas_50942627-4380-4a45-8ed4-578cf36de00a_700x700.jpg?v=1620488173"
-            alt="Agua Cristal"/>
+              <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/seven up.png"
+                alt="Gaseosa">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Seven up Postobon 3lts</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$6000</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
         
-        <img width="115px" height="110px" 
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/agua/Agua%20cristal%20con%20gas.jpg" 
-        alt="Agua Cristal con gas"/>
-    
-        <img width="128px" height="120px" 
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/agua/agua-brisa.png" 
-        alt="Agua brisa"/> 
+              <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/hit mango.jpg"
+                alt="Jugos">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Hit mango</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$2700</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
         
-        <img width="128px" height="120px" 
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/agua/Agua%20brisa%20manzana.jpg" 
-        alt="Agua Saborizada"/>
-    
-        <br><br>
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />  
-        <button type="button" name="añadir">Añadir +</button>    
-        <!-- <td>Bandeja Paisa, orgullosamente colombiano,desde el campo a tu mesa</td> -->
+              <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/hit mora.jpg"
+                alt="Jugos">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Hit Mora</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$2700</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
         
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
+              <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/hot tropical.jpg"
+                alt="Jugos">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Hit Tropical</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$2700</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
+              <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/jugos naturales.jpg"
+                alt="Jugos naturales">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Jugos Naturales</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$2100</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
+
+              <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/limonada.jpg"
+                alt="limonada natural">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Limonada Natural</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$2500</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
+
+              <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/lulada.jpg"
+                alt="Lulada">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Lulada</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$8000</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
+
+              <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/aguila-cerveza.png"
+                alt="Cerveza">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Cerveza Aguila</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$3000</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
+              <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/black.png"
+                alt="Cerveza">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Club Colombia  black</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$7000</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
+              <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/dorada.png"
+                alt="Cerveza">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Club Colombia Dorada</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$7000</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
+              <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/COSTEÑA.jpg"
+                alt="Cerveza">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Cerveza Costeña</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$4000</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
+              
+              <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/poker-x400.png"
+                alt="Cerveza">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Cerveza Poker</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$3000</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
+              <div class="ml-18 ..."><img class=""
+                src="estructura_menu/Bebidas/redds.png"
+                alt="Cerveza">
+            <h1 class="text-lefth text-yellow-500 text-lg">
+                <p class="font-semibold">Cerveza Redds</p>
+            </h1>
+            <h1 class="text-lefth text-black text-x2">
+                <p class="italic font-bold ">Precio:$4500</p>
+            </h1>
+
+            <li>
+
+                <form class="lg:col-span-3 md:grid grid-cols-1 lg:grid-cols-3" action="Carrito_compras.html">
+                    <input class="bg-gradient-to-r from-blue-600 via-green-300 to-green-200 " type="submit"
+                        value="AÑADIR +" />
+
+                </form>
+
+            </li>
+
+        </div>
+
     
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-
-        <br><br>
-        <img width="128px" height="120px"
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/gaseosa/pepsi.jpg"
-        alt="Gaseosa Pepsi"/>
-        
-        <img width="115px" height="110px" 
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/gaseosa/Gaseosa%20manzana.jpg" 
-        alt="Gaseosa Manzana"/>
-    
-        <img width="128px" height="120px" 
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/gaseosa/Gaseosa-Colombiana.jpg" 
-        alt="Gaseosa Colombiana "/> 
-        
-        <img width="128px" height="120px" 
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/gaseosa/Gaseosa%207up.jpg" 
-        alt="Gaseosa 7 up"/>
-
-        <img width="128px" height="120px" 
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/gaseosa/gaseosa-uva.jpg" 
-        alt="Gaseosa Uva"/>
-
-        <img width="128px" height="120px" 
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/gaseosa/naranja2l-1.jpg" 
-        alt="Gaseosa Naranja"/>
-
-        <img width="128px" height="120px" 
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/gaseosa/kola%20postobon.jpg" 
-        alt="Gaseosa Kola"/>
-
-        <br><br>
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />  
-        <button type="button" name="añadir">Añadir +</button>    
-        <!-- <td>Bandeja Paisa, orgullosamente colombiano,desde el campo a tu mesa</td> -->
-        
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-    
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-    
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-
-        <br><br>
-        <img width="128px" height="120px"
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/aguapanela.jpg"
-        alt="Aguapanela"/>
-
-        <br><br>
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-
-        <br><br>
-        <img width="128px" height="120px"
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/jugos%20naturales.jpg"
-        alt="Jugos naturales"/>
-
-        <br><br>
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-
-        <br><br>
-        <img width="128px" height="120px"
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/limonada.jpg"
-        alt="Limonada"/>
-        <br><br>
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-
-        <br><br>
-        <img width="128px" height="120px"
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/lulada.jpg"
-        alt="Lulada"/>
-        <br><br>
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
 
 
-        <br><br>
-        <img width="128px" height="120px"
-        src="https://www.nomamesguey.co/wp-content/uploads/2020/06/club_colombia_roja_ilforno@2x.jpg"
-        alt="Cerveza Club Colombia roja"/>
-        
-        <img width="115px" height="110px" 
-        src="https://asadosla80.com/wp-content/uploads/2020/04/Cerveza-club-colombia-dorada-asados-la-80-2.jpg" 
-        alt="Cerveza Club Colombia dorada"/>
-    
-        <img width="128px" height="120px" 
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/cerveza/black.png" 
-        alt="Cerveza Club Colombia negra"/> 
-        
-        <img width="128px" height="120px" 
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/cerveza/aguila-cerveza.png" 
-        alt="Cerveza aguila"/>
 
-        <img width="128px" height="120px" 
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/cerveza/poker-x400.png" 
-        alt="Cerveza poker"/>
+        </div>
 
-        <img width="128px" height="120px" 
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/cerveza/cerveza%20coste%c3%b1a.jpeg" 
-        alt="Cerveza costeña"/>
-
-        <img width="128px" height="120px" 
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/cerveza/heineken.jpg" 
-        alt="Heineken"/>
-
-        <img width="128px" height="120px" 
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/cerveza/redds.png" 
-        alt="Redds"/>
-
-        <br><br>
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />  
-        <button type="button" name="añadir">Añadir +</button>    
-        <!-- <td>Bandeja Paisa, orgullosamente colombiano,desde el campo a tu mesa</td> -->
-        
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-    
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-    
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-
-        <br><br>
-
-        <img width="128px" height="120px"
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/jugos-hit/jugo%20hit%20tropical.jpg"
-        alt="Jugo hit tropical"/>
-
-        <img width="128px" height="120px"
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/jugos-hit/Jugo%20hit%20mora.jpg"
-        alt="Jugo hit mora"/>
-
-        <img width="128px" height="120px"
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/jugos-hit/Jugo%20hit%20mango.jpg"
-        alt="Jugo hit mango"/>
-
-        <br><br>
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
-
-        <br><br>
-        <img width="128px" height="120px"
-        src="https://crustier-twists.000webhostapp.com/ciclo3/imagenes-menu/bebidas/pony%20malta.jpg"
-        alt="Pony Malta"/>
-        <br><br>
-        <img width="64px" src="estructura_menu/5.png" alt="Añadir a Carrito +" />
-        <button type="button" name="añadir">Añadir +</button>
+    </main>
 
 
 
 
 
+    </body>
 
-
-
-
-
-
-
-
-
-    
-        
-</body>
+</html>
