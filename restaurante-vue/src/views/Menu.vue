@@ -13,7 +13,7 @@
     <title>MENU</title>
 
     <!--class=" bg-gray-800"
-      
+
     <div><img class=" object-left-top gap-4 w-60 h-24 " src="https://crustier-twists.000webhostapp.com/imagenes/propuesta.png"
     alt="Logo_restaurante" /></div>    
      -->
@@ -24,7 +24,14 @@
     style="
       background-image: url(https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/restaurante/menu-art.jpg);
     "
-  >
+    >
+
+
+
+  <body class=" bg-fixed bg-cover bg-center bg-no-repeat h-768 w-full lg:p-8"
+    style="background-image: url(https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/restaurante/menu-art.jpg)">
+ 
+
     <main>
       <div>
         <h2 valor="Hello word">Productos</h2>
@@ -60,6 +67,7 @@
       </div>
     </main>
 
+
     <select v-model="selected">
       <option disabled value="">Seleccione un elemento</option>
       <option>A</option>
@@ -68,6 +76,18 @@
     </select>
     <span>Seleccionado: {{ selected }}</span>
     <p class="text-3xl ...">{{ selected }}</p>
+
+    <select v-model="selected">
+  <option disabled value="">Seleccione un elemento</option>
+  <option>A</option>
+  <option>B</option>
+  <option>C</option>
+  </select>
+  <span>Seleccionado: {{ selected }}</span>
+  <p class="text-3xl ...">{{ selected }}</p>
+
+
+
 
     <div
     v-for="(unProducto, llave) in listaProductos"
@@ -78,6 +98,9 @@
     <p class="text-3xl ...">{{ unProducto.nombre }}</p>
     <p class="text-3xl ...">{{ unProducto.precio }}</p>
   </div>
+    </body>
+
+
 
   </body>
 
@@ -148,6 +171,24 @@ header h1 {
 #boton {
   margin: 1rem;
 }
+
+    header h1{
+        font-size: 6rem;
+    }
+
+    .icono{
+        display: inline-block;
+        margin: 1rem;
+        padding: 0rem; 
+        row-gap: 2px;
+        width: 1.875rem;
+        height: 0.75rem;
+    }
+    #boton{
+        
+        margin: 1rem;
+    }
+
 
 /* #form_menu{
     display:grid;
