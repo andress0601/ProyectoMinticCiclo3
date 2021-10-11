@@ -75,13 +75,15 @@
      
 </head>
 
+        <body class=" bg-fixed bg-cover bg-center bg-no-repeat h-768 w-full lg:p-8"
+    style="background-image: url(https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/restaurante/menu-art.jpg)">
  
     <main>
         
     <div>
         <h2 valor="Hello word">Productos</h2>
         <form action="#" id="form_menu">
-            <label for="producto">Producto:</label>
+            <label for="producto"> ENTRADAS: </label>
             <select name="producto" id="producto" v-model="seleccion">
                 <option value="-1">Seleccione un producto</option>
 
@@ -95,12 +97,14 @@
              
             </select>
            
-            <button type="button">Agregar +</button>
+            <button id="boton" class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-gray-400 hover:to-gray-800 " 
+            type="button"> AÑADIR +</button>
             <!-- <select name="" id=""></select> -->
         </form>
     </div>
     </main>
-    
+    </body>
+
 </template>
 
 <script>
@@ -136,23 +140,17 @@ export default {
 
 <style scoped>
     header h1{
-        font-size: 1.5rem;
+        font-size: 6rem;
     }
-body {
-    text-align: left;
-    padding: 1rem;
-    margin:4rem;
-}
+    #boton{
+        
+        margin: 1rem;
+    }
 
-#form_menu{
+/* #form_menu{
     display:grid;
     grid-template-columns: 6rem 10rem;
     row-gap: 1rem;
-}
-main {
-    
-    display: grid;
-    grid-template-columns: 2fr 4fr;
-    column-gap:1rem;
-}
+} */
+
 </style>
