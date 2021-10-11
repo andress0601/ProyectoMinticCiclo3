@@ -87,7 +87,7 @@
             <select name="producto" id="producto" v-model="seleccion">
                 <option value="-1">Seleccione un producto</option>
 
-            <option
+            <option 
             v-for="(unProducto, llave) in listaProductos"
             v-bind:key="llave"
             v-bind:value="llave"
@@ -105,12 +105,14 @@
     </main>
     </body>
 
+    
+
 </template>
 
 <script>
 export default {
     mounted() {
-        let producto1 = { nombre: "Pandeyucas(Tradicionales y crocanticos)", precio: 6000};
+        let producto1 = { nombre: "Pandeyucas(Tradicionales y crocanticos)", precio: 6000, link:"https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Adicionales/pandeyucas.jpg"};
         let producto2 = { nombre: "Arepas(De maíz pelao)", precio: 8000};
         let producto3 = { nombre: "Hormigas Culonas(Platillo exótico y exquisito)", precio: 12000};
         let producto4 = { nombre: "Papas Fritas(Bien crujientes)", precio: 7000};
