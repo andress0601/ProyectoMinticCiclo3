@@ -103,13 +103,13 @@ export default {
     let producto2 = { 
       nombre: "Arepas(De maíz pelao)", 
       precio: 8000,
-      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Adicionales/Papas%20fritas.jpg",
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Adicionales/entrada%202%20(1).png",
     };
 
     let producto3 = {
       nombre: "Hormigas Culonas(Platillo exótico y exquisito)",
       precio: 12000,
-      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Adicionales/entrada.PNG",
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Adicionales/c.jpg",
     };
 
     let producto4 = { 
@@ -121,7 +121,7 @@ export default {
     let producto5 = {
       nombre: "Patacones(De los mejores plátanos)",
       precio: 7000,
-      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Adicionales/Patacon%20con%20Hogao.jpg",
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Adicionales/Captura%203.PNG",
     };
 
     this.listaProductos = [
