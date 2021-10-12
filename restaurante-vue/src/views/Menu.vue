@@ -41,7 +41,7 @@
           <select name="producto" id="producto" v-model="seleccion">
             <option value="-1">Seleccione un producto</option>
 
-            <option
+            <option  @click.prevent="platosMenu" 
               v-for="(unProducto, llave) in listaProductos"
               v-bind:key="llave"
               v-bind:value="llave"
@@ -68,6 +68,25 @@
           <!-- <select name="" id=""></select> -->
         </form>
       </div>
+
+      <!-- <div>
+        <h2>Listado de seleccion platos</h2>
+        <table border="1">
+          <thead>
+            <tr><th>PRODUCTO</th></tr>
+          </thead>
+           <tbody id="datos">
+            <tr v-for="(unProducto, j) in listaProductos":key="j">
+                <td>
+                  {{unProducto.producto.nombre}} - ${{unProducto.producto.precio}}
+                  </td>
+            </tr> 
+
+          </tbody>
+
+        </table>
+      </div> -->
+      
     </main>
 
 
@@ -90,15 +109,13 @@
   <p class="text-3xl ...">{{ selected }}</p>
 
 
-
-
     <div
     v-for="(unProducto, llave) in listaProductos"
     v-bind:key="llave"
     v-bind:value="llave"
   >
     <img :src="unProducto.link" style="width: 20%" alt="" />
-    <p class="text-3xl ...">{{ unProducto.nombre }}</p>
+    <p class="text-3xl  text-gray-900 ...">{{ unProducto.nombre }}</p>
     <p class="text-3xl ...">{{ unProducto.precio }}</p>
   </div>
     </body>
@@ -106,7 +123,7 @@
 
 
   </body>
-
+<p></p>
   
 </template>
 
@@ -162,7 +179,16 @@ export default {
         producto: {},
       },
       seleccion: -1,
+      listaSeleccion: [],
     };
+  },
+
+  methods: {
+    // platosMenu(){
+    //   this.compra.producto = this.listaProductos[this.seleccion];
+    //   this.listaSeleccion.push(this.compra);
+
+    // },
   },
 };
 </script>
