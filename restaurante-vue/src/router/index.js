@@ -2,6 +2,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Menu from '../views/Menu.vue'//coloco la ruta
+import CarritoCompras from '../components/CarritoCompras.vue'
 const routes = [
   {
     path: '/',//nombre de la ruta
@@ -12,6 +13,11 @@ const routes = [
     path: '/Menu',
     name: 'Menu',
     component: Menu,//mismo nombre de import
+  },
+  {
+    path: '/Carrito',
+    name: 'Carrito',
+    component: CarritoCompras,//mismo nombre de import
   }
 ]
 

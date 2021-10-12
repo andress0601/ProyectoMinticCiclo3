@@ -46,7 +46,7 @@
                     class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reservación</a>
     
     
-                  <a href="Carrito_compras.html"
+                  <a href="Carrito"
                     class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"> Ver Carrito</a>
                 </div>
               </div>
