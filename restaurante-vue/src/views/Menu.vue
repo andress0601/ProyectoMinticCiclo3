@@ -42,8 +42,8 @@
             </option>
           </select>
 
-          <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-            Añadir
+          <button class="bg-gradient-to-r from-green-300 to-blue-400 hover:from-gray-400 hover:to-gray-800 text-gray-800 font-semibold lg:m-4 py-2 px-4 border border-gray-600 rounded shadow">
+            AÑADIR +
           </button>
           <!-- <select name="" id=""></select> -->
         </form>
@@ -62,13 +62,13 @@
   
     <div
       
-      class="grid grid-cols-4 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"> 
+      class="grid grid-cols-4 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 lg:p-8"> 
       <a 
       v-for="(unProducto, llave) in listaProductos"
       v-bind:key="llave"
       v-bind:value="llave"
       href="#" class="group">
-        <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+        <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8 ">
           <img :src="unProducto.link" alt="" class="w-full h-full object-center object-cover group-hover:opacity-75">
         </div>
         <h3 class="mt-4 text-sm text-gray-700">
@@ -77,6 +77,9 @@
         <p class="mt-1 text-lg font-medium text-gray-900">
           ${{ unProducto.precio }}
         </p>
+        <button class="bg-gradient-to-r from-green-300 to-blue-400 hover:from-gray-400 hover:to-gray-800 text-gray-800 font-semibold lg:m-4 py-2 px-4 border border-gray-600 rounded shadow">
+            AÑADIR +
+          </button>
       </a>      
     </div>
   
@@ -98,6 +101,7 @@ export default {
       nombre: "Pandeyucas(Tradicionales y crocanticos)",
       precio: 6000,
       link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Adicionales/pandeyucas.jpg",
+      
     };
 
     let producto2 = { 
@@ -107,7 +111,7 @@ export default {
     };
 
     let producto3 = {
-      nombre: "Hormigas Culonas(Platillo exótico y exquisito)",
+      nombre: "Hormigas Culonas(Platillo  exquisito)",
       precio: 12000,
       link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Adicionales/c.jpg",
     };
@@ -151,6 +155,7 @@ header h1 {
 #boton {
   margin: 1rem;
 }
+
 
 /* #form_menu{
     display:grid;
