@@ -1,9 +1,17 @@
 <template>
+<<<<<<< HEAD
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-  <router-view/>
+=======
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
+    <router-link :to="{name:'Menu'}"> Menu</router-link> |
+  </div>
+>>>>>>> 0c548c8d26e5fcdc279b5aed449678eacc8f1c78
+<router-view/>
 </template>
 
 <style>
