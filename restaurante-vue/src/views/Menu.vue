@@ -1,5 +1,6 @@
 
    <template>
+   
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -22,7 +23,7 @@
   <body
     class="bg-fixed bg-cover bg-center bg-no-repeat h-768 w-full lg:p-8"
     style="
-      background-image: url(https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/restaurante/menu-art.jpg);
+      background-image: url(https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/restaurante/menu-art.jpg)
     "
     >
 
@@ -36,7 +37,7 @@
       <div>
         <h2 valor="Hello word">Productos</h2>
         <form action="#" id="form_menu">
-          <label for="producto"> ENTRADAS: </label>
+          <label for="producto"> ADICIONALES: </label>
           <select name="producto" id="producto" v-model="seleccion">
             <option value="-1">Seleccione un producto</option>
 
@@ -52,6 +53,8 @@
           <button
             id="boton"
             class="
+              font-semibold py-2 px-4
+              border border-gray-400 rounded shadow
               bg-gradient-to-r
               from-green-400
               to-blue-500
@@ -107,7 +110,7 @@
   
 </template>
 
-<script>
+<script class="mt-1 text-lg font-medium text-gray-900" >
 import NavBar from "@/components/NavBar.vue";
 export default {
   components: {
@@ -123,25 +126,25 @@ export default {
     let producto2 = { 
       nombre: "Arepas(De maíz pelao)", 
       precio: 8000,
-      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Adicionales/Captura%203.PNG",
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Adicionales/entrada%202%20(1).png",
     };
 
     let producto3 = {
       nombre: "Hormigas Culonas(Platillo exótico y exquisito)",
       precio: 12000,
-      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Adicionales/entrada.PNG",
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Adicionales/c.jpg",
     };
 
     let producto4 = { 
-      nombre: "Papas Fritas(Bien crujientes)", 
+      nombre: "Papas a la Francesa(Bien crujientes)", 
       precio: 7000,
       link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Adicionales/Papas%20fritas.jpg",
       };
 
     let producto5 = {
-      nombre: "Patacones(De los mejores plátanos)",
+      nombre: "Patacones(De los mejores plátanos de nuestra tierra)",
       precio: 7000,
-      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Adicionales/Patacon%20con%20Hogao.jpg",
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Adicionales/Captura%203.PNG",
     };
 
     this.listaProductos = [
@@ -188,7 +191,7 @@ header h1 {
         
         margin: 1rem;
     }
-
+  
 
 /* #form_menu{
     display:grid;
