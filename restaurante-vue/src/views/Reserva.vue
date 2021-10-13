@@ -1,8 +1,18 @@
 <template>
- <header> 
 
-          <p class="text-center"><img width="356px" src="https://crustier-twists.000webhostapp.com/imagenes/propuesta.png"
-          alt="Logo_restaurante"/></p>
+
+<body class="bg-fixed bg-cover bg-center bg-no-repeat h-68 w-full lg:p-16"
+    style="background-image: url(https://userscontent2.emaze.com/images/f1d285b2-061c-479b-a343-bb045bbbc074/e340fec4af21648450c67a2ca50b4a79.jpg);
+    ">
+    
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+ <header> 
+          <!-- <p class="text-center"><img width="356px" src="https://crustier-twists.000webhostapp.com/imagenes/propuesta.png"
+          alt="Logo_restaurante"/></p> -->
           <div class="text-center"> 
             <h1> POR ELEGIR NUESTROS PRODUCTOS </h1>
           </div>
@@ -14,20 +24,24 @@
               </div>
           </div>  
  </header>
-<!-- <div class="text-5xl font-extrabold ...">
+
+
+
+<div class="text-5xl font-extrabold ...">
   <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
-    Hello world
+    ....
   </span>
-</div> -->
+</div>
 
 
-<div id="boton0">
-  <button v-on:click="boton0">Confirmar Compra</button>
-</div>
-<br>
-<div id="boton1">
-  <button v-on:click="boton1">Solicitar Reserva</button>
-</div>
+<button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+  Confirmar Compra
+</button>
+
+<button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+  Solicitar Reserva
+</button>
+</body>
 
 </template>
 
@@ -40,11 +54,11 @@
 
 <style scoped>
 
-header{
+template{
 
-  background-image: url(https://userscontent2.emaze.com/images/f1d285b2-061c-479b-a343-bb045bbbc074/e340fec4af21648450c67a2ca50b4a79.jpg);
+background-image: url();
   
-  } 
+} 
 
 
 h3 {

@@ -42,7 +42,7 @@
                   <a href="register.html"
                     class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Registro</a>
     
-                  <a href="Estructura_reserva.html"
+                  <a href="Reserva"
                     class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reservación</a>
     
     
