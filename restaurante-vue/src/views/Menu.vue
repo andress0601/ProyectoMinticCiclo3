@@ -259,6 +259,183 @@ export default {
        tipo: "(Adicionales)",
     };
 
+    let producto22 = {
+      id:22,
+      nombre: "Agua Cristal con gas",
+      precio: 1800,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/cristal%20gas.jpg",
+       tipo: "(Bebidas)",
+    };
+
+    let producto23 = {
+      id:23,
+      nombre: "Agua Cristal",
+      precio: 1200,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/cristal.png",
+       tipo: "(Bebidas)",
+    };
+    let producto24 = {
+      id:24,
+      nombre: "Agua Manzana",
+      precio: 2300,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/brisa%20manzana.jpg",
+       tipo: "(Bebidas)",
+    };
+    let producto25 = {
+      id:25,
+      nombre: "Aguapanela",
+      precio: 1800,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/aguapanela.jpg",
+       tipo: "(Bebidas)",
+    };
+    let producto26 = {
+      id:26,
+      nombre: "Pony Malta 1.5",
+      precio: 3000,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/pony.jpg",
+       tipo: "(Bebidas)",
+    };
+    let producto27 = {
+      id:27,
+      nombre: "Cocacola 1.5",
+      precio: 3500,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/coca%20cola.jpg",
+       tipo: "(Bebidas)",
+    };
+    let producto28 = {
+      id:28,
+      nombre: "Combo :Sprit,Cocacola,Fanta",
+      precio: 6000,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/bebidas.jpg",
+       tipo: "(Bebidas)",
+    };
+    let producto29 = {
+      id:29,
+      nombre: "Colombiana Postobon 1.5",
+      precio: 3000,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/colombiana.jpg",
+       tipo: "(Bebidas)",
+    };
+    let producto30 = {
+      id:30,
+      nombre: "Kola Postobon 1.5",
+      precio: 3000,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/gaseosa_kola_postobon.png",
+       tipo: "(Bebidas)",
+    };
+    let producto31 = {
+      id:31,
+      nombre: "Manzana Postobon 3lts",
+      precio: 6000,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/manza.jpg",
+       tipo: "(Bebidas)",
+    };
+    let producto32 = {
+      id:32,
+      nombre: "Naranja Postobon 1.5",
+      precio: 3000,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/naranja.jpg",
+       tipo: "(Bebidas)",
+    };
+    let producto33 = {
+      id:33,
+      nombre: "Uva Postobon 1.5",
+      precio: 3000,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/uva.jpg",
+       tipo: "(Bebidas)",
+    };
+    let producto34 = {
+      id:34,
+      nombre: "Seven up Postobon 3lts",
+      precio: 6000,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/seven%20up.png",
+       tipo: "(Bebidas)",
+    };
+    let producto35 = {
+      id:35,
+      nombre: "Hit mango",
+      precio: 2700,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/hit%20mango.jpg",
+       tipo: "(Bebidas)",
+    };
+    let producto36 = {
+      id:36,
+      nombre: "Hit Mora",
+      precio: 2700,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/hit%20mora.jpg",
+       tipo: "(Bebidas)",
+    };
+    let producto37 = {
+      id:37,
+      nombre: "Hit Tropical",
+      precio: 2700,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/hot%20tropical.jpg",
+       tipo: "(Bebidas)",
+    };
+    let producto38 = {
+      id:38,
+      nombre: "Jugos Naturales",
+      precio: 2100,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/jugos%20naturales.jpg",
+       tipo: "(Bebidas)",
+    };
+    let producto39 = {
+      id:39,
+      nombre: "Limonada Natural",
+      precio: 2500,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/limonada.jpg",
+       tipo: "(Bebidas)",
+    };
+    let producto40 = {
+      id:40,
+      nombre: "Lulada",
+      precio: 2500,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/lulada.jpg",
+       tipo: "(Bebidas)",
+    };
+    let producto41 = {
+      id:41,
+      nombre: "Cerveza Aguila",
+      precio: 3000,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/aguila-cerveza.png",
+       tipo: "(Bebidas)",
+    };
+    let producto42 = {
+      id:42,
+      nombre: "Club Colombia  black",
+      precio: 7000,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/black.png",
+       tipo: "(Bebidas)",
+    };
+    let producto43 = {
+      id:43,
+      nombre: "Club Colombia Dorada",
+      precio: 7000,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/dorada.png",
+       tipo: "(Bebidas)",
+    };
+    let producto44 = {
+      id:44,
+      nombre: "Cerveza Costeña (und)",
+      precio: 4000,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/COSTE%c3%91A.jpg",
+       tipo: "(Bebidas)",
+    };
+    let producto45 = {
+      id:45,
+      nombre: "Cerveza Poker",
+      precio: 3000,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/poker-x400.png",
+       tipo: "(Bebidas)",
+    };
+    let producto46 = {
+      id:46,
+      nombre: "Heineken ",
+      precio: 2500,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/heineken.jpg",
+       tipo: "(Bebidas)",
+    };
+
     this.listaProductos = [
       producto1,
       producto2,
@@ -281,6 +458,33 @@ export default {
       producto19,
       producto20,
       producto21,
+      producto22,
+      producto23,
+      producto24,
+      producto25,
+      producto26,
+      producto27,
+      producto28,
+      producto29,
+      producto30,
+      producto31,
+      producto32,
+      producto33,
+      producto34,
+      producto35,
+      producto36,
+      producto37,
+      producto38,
+      producto39,
+      producto40,
+      producto41,
+      producto42,
+      producto43,
+      producto44,
+      producto45,
+      producto46,
+      
+
       
 
     ]; //cuidado, el this
