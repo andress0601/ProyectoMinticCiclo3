@@ -33,21 +33,21 @@
               <div class="hidden sm:block sm:ml-6">
                 <div class="flex space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  <a href="Menu" class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    aria-current="page">Menú</a>
+                  <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    aria-current="page" :to="{name:'Menu'}">Menu</router-link>
+                  
+                  <!-- <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    aria-current="page" :to="{name:'login'}">Login</router-link>
+                  
+                  <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    aria-current="page" :to="{name:'register'}">Registro</router-link>
+                   -->
+                  <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    aria-current="page" :to="{name:'Reserva'}">Reservación</router-link>
     
-                  <a href="login.html"
-                    class="  text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Login</a>
+                  <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    aria-current="page" :to="{name:'Carrito'}">Ver Carrito</router-link>
     
-                  <a href="register.html"
-                    class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Registro</a>
-    
-                  <a href="Reserva"
-                    class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reservación</a>
-    
-    
-                  <a href="Carrito"
-                    class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"> Ver Carrito</a>
                 </div>
               </div>
             </div>

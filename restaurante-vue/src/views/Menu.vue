@@ -91,7 +91,7 @@
   
   </body>
 
-<p></p>
+<div></div>
   
 </template>
 
@@ -436,6 +436,7 @@ export default {
       link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/heineken.jpg",
        tipo: "(Bebidas)",
     };
+<<<<<<< HEAD
     //ESPECIALES 
     let producto47 = {
      id:47,
@@ -497,6 +498,9 @@ export default {
 
 
 
+=======
+   
+>>>>>>> code
 
     this.listaProductos = [
       producto1,
