@@ -101,4 +101,16 @@
 
   </div>
 
+  <select v-model="selected">
+  <option disabled value="">Seleccione un elemento</option>
+  <option>A</option>
+  <option>B</option>
+  <option>C</option>
+</select>
+    <span>Seleccionado: {{ selected }}</span>
+
 </template>
+
+<script>
+ 
+</script>

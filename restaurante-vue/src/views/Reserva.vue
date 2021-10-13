@@ -1,7 +1,7 @@
 <template>
 
 
-<body class="bg-fixed bg-cover bg-center bg-no-repeat h-68 w-full lg:p-16"
+<body class="bg-fixed bg-cover bg-center bg-no-repeat h-68 w-full lg:p-15"
     style="background-image: url(https://userscontent2.emaze.com/images/f1d285b2-061c-479b-a343-bb045bbbc074/e340fec4af21648450c67a2ca50b4a79.jpg);
     ">
     
