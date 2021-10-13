@@ -266,8 +266,8 @@ h1{
 
 }
     
-fade-enter{
-}
+/* fade-enter{
+} */
 
 
 </style>
