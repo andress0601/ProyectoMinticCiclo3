@@ -259,6 +259,7 @@ export default {
        tipo: "(Adicionales)",
     };
 
+    //BEBIDAS 
     let producto22 = {
       id:22,
       nombre: "Agua Cristal con gas",
@@ -283,21 +284,21 @@ export default {
     };
     let producto25 = {
       id:25,
-      nombre: "Aguapanela",
+      nombre: "Aguapanela 1,5 lts",
       precio: 1800,
       link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/aguapanela.jpg",
        tipo: "(Bebidas)",
     };
     let producto26 = {
       id:26,
-      nombre: "Pony Malta 1.5",
+      nombre: "Pony Malta 1.5 lts",
       precio: 3000,
       link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/pony.jpg",
        tipo: "(Bebidas)",
     };
     let producto27 = {
       id:27,
-      nombre: "Cocacola 1.5",
+      nombre: "Cocacola 1.5 lts",
       precio: 3500,
       link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/coca%20cola.jpg",
        tipo: "(Bebidas)",
@@ -311,14 +312,14 @@ export default {
     };
     let producto29 = {
       id:29,
-      nombre: "Colombiana Postobon 1.5",
+      nombre: "Colombiana Postobon 1.5 lts",
       precio: 3000,
       link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/colombiana.jpg",
        tipo: "(Bebidas)",
     };
     let producto30 = {
       id:30,
-      nombre: "Kola Postobon 1.5",
+      nombre: "Kola Postobon 1.5 lts",
       precio: 3000,
       link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/gaseosa_kola_postobon.png",
        tipo: "(Bebidas)",
@@ -332,14 +333,14 @@ export default {
     };
     let producto32 = {
       id:32,
-      nombre: "Naranja Postobon 1.5",
+      nombre: "Naranja Postobon 1.5 lts",
       precio: 3000,
       link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/naranja.jpg",
        tipo: "(Bebidas)",
     };
     let producto33 = {
       id:33,
-      nombre: "Uva Postobon 1.5",
+      nombre: "Uva Postobon 1.5 lts",
       precio: 3000,
       link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/uva.jpg",
        tipo: "(Bebidas)",
@@ -435,6 +436,67 @@ export default {
       link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/heineken.jpg",
        tipo: "(Bebidas)",
     };
+    //ESPECIALES 
+    let producto47 = {
+     id:47,
+     nombre: "Combo plato típico (Carne Oreada,Cabro,Rellena,Chorizo,Pepitoria,Arepa,Yuca y Ensalada)",
+     precio: 43900,
+     link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/combo%201.jpg",
+      tipo:"(Especiales)",
+    };
+    let producto48 = {
+      id:48,
+      nombre: "Combo fritanga mediana (Chorizo,Rellena,Lomo de Cerdo,Costillitas de Cerdo,Chicharrón,Papa criolla y Maduro)",
+      precio: 36900,
+      link:"https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/combo%203.png",
+       tipo:"(Especiales)",
+    };
+    let producto49 ={
+      id:49,
+      nombre: "Champagne vino espumoso (Ideal para tus momentos especiales)",
+      precio: 73000,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/champagne%20vino%20espumoso%2073000.png",
+       tipo:"(Especiales)",
+    };
+    let producto50 ={
+      id:50,
+      nombre: "Champagne smirnoft (Champagne con sabores a naranja y lulo)",
+      precio: 45000,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/champa%c3%b1a.jpg",
+       tipo:"(Especiales)",
+    };
+    let producto51 ={
+      id:51,
+      nombre: "Champaña Francesa Moet & chandon Brut imperial",
+      precio: 273900,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/Champa%c3%b1a%20Francesa%20Moet%20&%20chandon%20Brut%20imperial.png",
+       tipo:"(Especiales)",
+    };
+    let producto52 ={
+      id:52,
+      nombre: "Maipo Vino tinto cabernet sauvignon",
+      precio: 73000,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/maipo%20vino%20tinto%20cabernet%20sauvignon.jpg",
+       tipo:"(Especiales)",
+    };
+    let producto53 ={
+      id:53,
+      nombre: "Vino tinto merlot",
+      precio: 57000,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/vino-tinto-montes-classic-series-merlot.jpg",
+       tipo:"(Especiales)",
+    };
+    let producto54 ={
+      id:54,
+      nombre: "Vino blanco Santa Helena",
+      precio: 38650,
+      link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/Vinos-blanco_santa%20helena.jpg",
+       tipo:"(Especiales)",
+    };
+
+
+
+
 
     this.listaProductos = [
       producto1,
@@ -483,6 +545,15 @@ export default {
       producto44,
       producto45,
       producto46,
+      producto47,
+      producto48,
+      producto49,
+      producto50,
+      producto51,
+      producto52,
+      producto53,
+      producto54,
+
       
 
       
