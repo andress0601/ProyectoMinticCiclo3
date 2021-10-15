@@ -71,7 +71,7 @@
       <div class="space-y-4 ...">
       <span class="block ...">
         <p class="text-3xl ...">Costo de domicilio</p>
-        <p class="text-2xl ...">$10.000</p>
+        <p class="text-2xl ...">$20.000</p>
       </span>
       <span class="block ...">
         <p class="text-3xl ...">Descuento</p>

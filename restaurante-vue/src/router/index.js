@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Menu from '../views/Menu.vue'//coloco la ruta
 import Reserva from '../views/Reserva.vue'
 import CarritoCompras from '../components/CarritoCompras.vue'
+
 const routes = [
   {
     path: '/',//nombre de la ruta
@@ -24,7 +25,16 @@ const routes = [
     path: '/Reserva',
     name:'Reserva',
     component: Reserva,
-  }
+  },
+  {
+    path: '/compras',
+    name: 'Compras',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/prueba.vue')
+  },
+ 
 ]
 
 const router = createRouter({
