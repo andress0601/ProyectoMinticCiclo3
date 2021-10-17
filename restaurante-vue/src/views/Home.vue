@@ -119,7 +119,7 @@ export default {
       
   methods: {
     procesarInformacion(){
-       this.compra.total = 0;
+      this.compra.total = 0;
       this.compra.descuento = 0;
 
       this.compra.producto = this.listaProductos[this.seleccion];

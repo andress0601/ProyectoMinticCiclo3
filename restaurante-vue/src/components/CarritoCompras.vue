@@ -1,28 +1,39 @@
 <template>
-     <div class="grid grid-cols-2">
+
+<div class="bg-fondo-restaurante">
+  <div class="grid grid-cols-2">
 
     <div class="flex flex-col">
   <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
     <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
       <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-        <table class="min-w-full divide-y divide-gray-200">
+        <table class="min-w-full divide-y divide-gray-200"
+        v-for="(unProducto, llave) in listaProductos"
+      v-bind:key="llave"
+      v-bind:value="llave"
+        >
           
-          <tbody class="bg-white divide-y divide-gray-200">
-            <tr>
+          <tbody 
+          v-for="(unaCompra, i) in listaCompras" :key="i"
+          class="bg-white divide-y divide-gray-200">
+            
+            <tr 
+            v-if="unaCompra.producto === unProducto.id "
+            >
               <!-- columna1 -->
               <td class="px-6 py-4 whitespace-nowrap">
 
                 
                 <div class="flex items-center">
                   <div class="flex-shrink-0 h-10 w-10">
-                    <img class="h-10 w-10 rounded-full" src="https://i1.wp.com/surtidoradeaves.com/wp-content/uploads/IMG/18A/25T212751.727.png?resize=750%2C500&ssl=1" alt="">
+                    <img class="h-10 w-10 rounded-full" :src="unProducto.link" alt="">
                   </div>
                   <div class="ml-4">
                     <div class="text-sm font-medium text-gray-900">
-                      Pollo asado
+                      {{unProducto.nombre}}
                     </div>
                     <div class="text-sm text-gray-500">
-                      Precio $24.000
+                      ${{unProducto.precio}}
                     </div>
                   </div>
                 </div>
@@ -61,6 +72,7 @@
 
             <!-- More people... -->
           </tbody>
+
         </table>
       </div>
     </div>
@@ -83,7 +95,7 @@
       </span>
 
       <span class="block ...">
-        <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+        <button @click.prevent="procesarInformacion" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
           Validar
         </button>
       </span>
@@ -100,17 +112,45 @@
     
 
   </div>
+</div>
 
-  <select v-model="selected">
-  <option disabled value="">Seleccione un elemento</option>
-  <option>A</option>
-  <option>B</option>
-  <option>C</option>
-</select>
-    <span>Seleccionado: {{ selected }}</span>
+  
+
+  
 
 </template>
 
 <script>
- 
+  import CompraService from "@/services/compras.js";
+  import ProductoService from "@/services/productos.js";
+
+  export default {
+  mounted() {
+    this.listaCompras=CompraService.obtenerTodos();
+    this.listaProductos= ProductoService.obtenerTodos();
+    
+
+        // if(!this.cliente.nombre){//no tiene permisos, entonces salgase
+        //    this.$router.push({name:"login"});//regresese
+        // }
+  },
+  
+  data() {
+    return {
+      titulo:"Estructura Lógica-pruebas",
+      listaCompras:[],
+      listaProductos: [],
+      //nombresEnvio: ["Domicilio", "Sin Domicilio"],
+      
+    };
+    
+  },
+   methods: {
+     procesarInformacion(){
+     
+      
+     
+     }
+   }
+}
 </script>

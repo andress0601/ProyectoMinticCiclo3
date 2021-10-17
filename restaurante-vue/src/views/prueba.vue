@@ -27,7 +27,11 @@
         </thead>
         <tbody class="bg-blue-200" id="datos_compras">
           <tr v-for="(unaCompra, i) in listaCompras" :key="i">
-    
+            <td>
+              {{unaCompra.producto}}
+            </td>
+            
+            <!--
             <td>
               {{ unaCompra.producto.nombre }} - ${{ unaCompra.producto.precio }} -{{unaCompra.producto.tipo}}
             </td>
@@ -35,9 +39,29 @@
             <td>{{ nombresEnvio[unaCompra.envio] }}</td>
             <td>${{ unaCompra.descuento }}</td>
             <td>${{ unaCompra.total }}</td>
+            -->
           </tr>
         </tbody>
       </table>
+    
+    </div>
+
+    <div 
+      v-for="(unProducto, llave) in listaProductos"
+      v-bind:key="llave"
+      v-bind:value="llave"
+    >
+    <div 
+    v-for="(unaCompra, llave) in listaCompras"
+      v-bind:key="llave"
+      v-bind:value="llave"
+    >
+    <p
+    v-if="unaCompra.producto === unProducto.id "
+    >
+    {{unProducto.nombre}}
+    </p>
+    </div>
     
     </div>
     <!--Aplicar a página para velocidad -->
@@ -50,11 +74,12 @@
 
 <script>
 import CompraService from "@/services/compras.js";
-
+import ProductoService from "@/services/productos.js";
 
 export default {
   mounted() {
     this.listaCompras=CompraService.obtenerTodos();
+    this.listaProductos= ProductoService.obtenerTodos();
     
 
         // if(!this.cliente.nombre){//no tiene permisos, entonces salgase
@@ -66,7 +91,8 @@ export default {
     return {
       titulo:"Estructura Lógica-pruebas",
       listaCompras:[],
-      nombresEnvio: ["Domicilio", "Sin Domicilio"],
+      listaProductos: [],
+      //nombresEnvio: ["Domicilio", "Sin Domicilio"],
       
     };
     
