@@ -1,5 +1,6 @@
 
 <template>
+<div>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,13 +11,14 @@
       type="image/x-icon"
     />
 
-    <title>MENU</title>
 
     <!--class=" bg-gray-800"
       
     <div><img class=" object-left-top gap-4 w-60 h-24 " src="https://crustier-twists.000webhostapp.com/imagenes/propuesta.png"
     alt="Logo_restaurante" /></div>    
      -->
+     
+       
   </head>
 
   <body
@@ -26,31 +28,27 @@
     "
   >
     <!--
-    <main>
-      <div>
-        <h2 valor="Hello word">Productos</h2>
-        <form action="#" id="form_menu">
-          <label for="producto"> PRODUCTOS: </label>
-          <select name="producto" id="producto" v-model="seleccion">
-            <option value="-1">Seleccione un producto</option>
-
-            <option
-              v-for="(unProducto, llave) in listaProductos"
-              v-bind:key="llave"
-              v-bind:value="llave"
-            >
-              {{ unProducto.nombre }} - ${{ unProducto.precio }} - {{unProducto.tipo}}
-            </option>
-          </select>
-
-          <button class="bg-gradient-to-r from-green-300 to-blue-400 hover:from-gray-400 hover:to-gray-800 text-gray-800 font-semibold lg:m-4 py-2 px-4 border border-gray-600 rounded shadow">
-            AÑADIR +
-          </button>
-          
-        </form>
-      </div>
-    </main>
+   
     -->
+    <div>
+       <button
+        class="
+          text-4xl text-white
+          lg:p-2
+          shadow-2xl
+          bg-gradient-to-r
+          from-gray-500
+          via-gray-800
+          to-gray-500
+          font-semibold
+        "
+      >
+        {{ titulo }}
+      </button>
+     </div>
+     <br>
+    
+    <label for="categoria">Categoría:</label>
     <select v-model="selected">
       <option disabled value="">Seleccione un elemento</option>
       <option>(Entrada)</option>
@@ -86,7 +84,7 @@
           ${{ unProducto.precio }}
         </p>
         
-        <button  @click.prevent="procesarInformacion(unProducto.id)" class="bg-gradient-to-r from-green-300 to-blue-400 hover:from-gray-400 hover:to-gray-800 text-gray-800 font-semibold lg:m-4 py-2 px-4 border border-gray-600 rounded shadow">
+        <button  @click.prevent="procesarInformacion(unProducto.id), validarInformacion()" class="bg-gradient-to-r from-green-300 to-blue-400 hover:from-gray-400 hover:to-gray-800 text-gray-800 font-semibold lg:m-4 py-2 px-4 border border-gray-600 rounded shadow">
             AÑADIR +
           </button>
 
@@ -98,7 +96,7 @@
   
   </body>
 
-<div></div>
+</div>
   
 </template>
 
@@ -106,6 +104,7 @@
 import NavBar from "@/components/NavBar.vue";
 import ProductoService from "@/services/productos.js";
 import CompraService from "@/services/compras.js";
+import ClienteService from "@/services/clientes.js";
 export default {
   components: {
     NavBar,
@@ -113,10 +112,14 @@ export default {
   mounted() {
     this.listaProductos= ProductoService.obtenerTodos();
     this.listaCompras=CompraService.obtenerTodos();
+    this.cliente= ClienteService.obtenerCliente();
+    
+    
   },
   data() {
     return {
       listaCompras:[],
+      
       titulo:"Te damos la bienvenida al sabor de nuestra Tierra",
       compra: {
         //producto:{},
@@ -124,6 +127,7 @@ export default {
         //cantidad: 0,
         //envio:0,
         producto: 0,
+       
       },
       selected: '',
       listaProductos: [],
@@ -136,6 +140,12 @@ export default {
       this.compra.producto = id;
       this.listaCompras.push(this.compra);
       this.$router.push({name:"Carrito"});
+    },
+
+    validarInformacion(){
+      if(!this.cliente.nombre){
+           this.$router.push({name:"login"});
+        }
     }
   }
 };

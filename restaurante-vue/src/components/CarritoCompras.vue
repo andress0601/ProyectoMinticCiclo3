@@ -79,8 +79,14 @@
   </div>
     </div>
     
-    <div class="container mx-auto">
+    <div class="container mx-auto text-gray-800">
       <div class="space-y-4 ...">
+        
+ 
+      <span class="block ...">
+        <p class="text-3xl ...">Usuario: {{cliente.nombre}} </p>
+       
+      </span>
       <span class="block ...">
         <p class="text-3xl ...">Costo de domicilio</p>
         <p class="text-2xl ...">$20.000</p>
@@ -123,11 +129,13 @@
 <script>
   import CompraService from "@/services/compras.js";
   import ProductoService from "@/services/productos.js";
+  import ClienteService from "@/services/clientes.js"
 
   export default {
   mounted() {
     this.listaCompras=CompraService.obtenerTodos();
     this.listaProductos= ProductoService.obtenerTodos();
+    this.cliente= ClienteService.obtenerCliente();
     
 
         // if(!this.cliente.nombre){//no tiene permisos, entonces salgase
@@ -140,6 +148,7 @@
       titulo:"Estructura Lógica-pruebas",
       listaCompras:[],
       listaProductos: [],
+      cliente:{}
       //nombresEnvio: ["Domicilio", "Sin Domicilio"],
       
     };
