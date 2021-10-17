@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Menu from '../views/Menu.vue'//coloco la ruta
 import Reserva from '../views/Reserva.vue'
 import CarritoCompras from '../components/CarritoCompras.vue'
+import  login from '../views/login.vue'
 
 const routes = [
   {
@@ -24,7 +25,12 @@ const routes = [
   {
     path: '/Reserva',
     name:'Reserva',
-    component: Reserva,
+    component: Reserva
+  },
+  {
+    path: '/Login',
+    name: 'login',
+    component: login
   },
   {
     path: '/compras',
