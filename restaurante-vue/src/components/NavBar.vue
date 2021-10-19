@@ -36,8 +36,8 @@
                   <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     aria-current="page" :to="{name:'Menu'}">Menu</router-link>
                     
-                  <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    aria-current="page" :to="{name:'Home'}">Home</router-link>
+                  <!-- <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    aria-current="page" :to="{name:'Home'}">Home</router-link> -->
                   
                   
                   <!-- <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"

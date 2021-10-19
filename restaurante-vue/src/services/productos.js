@@ -318,7 +318,7 @@ class ProducoService{
           {
             id:44,
             nombre: "Cerveza Costeña (und)",
-            precio: 4000,
+            precio: 65000,
             link: "https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/COSTE%c3%91A.jpg",
             tipo: "(Bebidas)",
           },
