@@ -41,7 +41,7 @@
   <div class="modal" v-if="showModal">
     <h2>Solicita una reserva</h2>
     <div>
-      <form class="w-full max-w-lg">
+      <form action="#" method="POST" class="w-full max-w-lg" >
   <div class="flex flex-wrap -mx-3 mb-6">
 
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -60,7 +60,7 @@
       <input  type="radio" name="reserva" value="M" > Jornada mañana
       </div>
       <div class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-50 rounded py-1 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-      <input type="radio" name="reserva" value="T"> Jornada Tarde
+      <input type="radio" name="reserva" value="T" > Jornada Tarde
       </div>
     </div>
 
@@ -139,11 +139,20 @@
       </transition>
       <transition name="fade">
         <div class="modal" v-if="showModal3">
-        <h2>Titulo</h2> 
-        Contenido
-        <button  @click="showModal3 =false" class=" bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-          Cerrar
-        </button>
+
+      <div role="alert">
+        <div class="bg-blue-500 text-white font-bold rounded-t px-4 py-2">
+          GRACIAS POR TU COMPRA
+        </div>
+        <div class="border border-t-0 border-blue-400 rounded-b bg-blue-100 px-4 py-3 text-blue-700">
+          <p>¡¡Tu producto llegará según lo hayas programado!!</p>
+          <h3> link para ver el pedido </h3>
+              <button  @click="showModal =false" class=" bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                Cerrar
+              </button>
+        </div>
+      </div>
+
         </div>
       </transition>
       <button  @click="showModal3 =true" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
@@ -262,11 +271,20 @@ Solicita tu reserva
       </transition>
       <transition name="fade">
         <div class="modal" v-if="showModal3">
-        <h2>Titulo</h2> 
-        Contenido
-        <button  @click="showModal3 =false" class=" bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+        
+        <div role="alert">
+  <div class="bg-blue-500 text-white font-bold rounded-t px-4 py-2">
+    GRACIAS POR TU COMPRA
+  </div>
+  <div class="border border-t-0 border-blue-400 rounded-b bg-blue-100 px-4 py-3 text-blue-700">
+    <p>¡¡Tu producto llegará según lo hayas programado!!</p>
+    <h3> link para ver el pedido </h3>
+        <button  @click="showModal2 =false" class=" bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
           Cerrar
         </button>
+  </div>
+</div>
+
         </div>
       </transition>
       <button  @click="showModal3 =true" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
@@ -303,6 +321,14 @@ export default {
 
 
 <style scoped>
+
+h4{
+  font-size: 3rem ;
+  font-style: italic;
+  color: #DF2E2E;
+  
+
+}
 
 h2{
   font-size: 3rem;
