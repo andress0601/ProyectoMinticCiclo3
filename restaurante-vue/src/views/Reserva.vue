@@ -142,7 +142,7 @@
 
       <div role="alert">
         <div class="bg-blue-500 text-white font-bold rounded-t px-4 py-2">
-          GRACIAS POR TU COMPRA
+         ENHORABUENA, HAZ REGISTRADO TU RESERVA
         </div>
         <div class="border border-t-0 border-blue-400 rounded-b bg-blue-100 px-4 py-3 text-blue-700">
           <p>¡¡Tu producto llegará según lo hayas programado!!</p>
@@ -273,13 +273,13 @@ Solicita tu reserva
         <div class="modal" v-if="showModal3">
         
         <div role="alert">
-  <div class="bg-blue-500 text-white font-bold rounded-t px-4 py-2">
+  <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
     GRACIAS POR TU COMPRA
   </div>
-  <div class="border border-t-0 border-blue-400 rounded-b bg-blue-100 px-4 py-3 text-blue-700">
-    <p>¡¡Tu producto llegará según lo hayas programado!!</p>
+  <div class="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
+    <p>¡Tu domicilio llegará muy pronto!!</p>
     <h3> link para ver el pedido </h3>
-        <button  @click="showModal2 =false" class=" bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+        <button  @click="showModal2 =false" class=" bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">
           Cerrar
         </button>
   </div>
