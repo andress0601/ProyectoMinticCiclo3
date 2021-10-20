@@ -5,6 +5,7 @@ import Home from '../views/Home.vue'
 import Reserva from '../views/Reserva.vue'
 import CarritoCompras from '../components/CarritoCompras.vue'
 import  login from '../views/login.vue'
+import Factura from '../views/Factura.vue'
 
 const routes = [
   {
@@ -25,12 +26,17 @@ const routes = [
   {
     path: '/Reserva',
     name:'Reserva',
-    component: Reserva
+    component: Reserva,
   },
   {
     path: '/Login',
     name: 'login',
-    component: login
+    component: login,
+  },
+  {
+    path: '/Factura',
+    name: 'Factura',
+    component: Factura,
   },
   // {
   //   path: '/compras',
