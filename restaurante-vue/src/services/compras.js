@@ -1,7 +1,7 @@
 class CompraService{
     Compras=[];
 
-    constructor(){//Cuando la coloco acá, ya me queda global
+    constructor(){
         this.compras=[
             
         ];
@@ -9,7 +9,7 @@ class CompraService{
         
     }
 
-    obtenerTodos(){//me regresa información
+    obtenerTodos(){
         return this.compras;
     }
 

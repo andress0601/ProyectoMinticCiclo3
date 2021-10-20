@@ -22,6 +22,9 @@ class ClienteService{
             }
         }
     }
+    agregarCliente(){
+        return this.listado;
+    }
     //retorna
     obtenerCliente(){
         return this.cliente;

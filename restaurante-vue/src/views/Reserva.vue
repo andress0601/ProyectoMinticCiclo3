@@ -14,7 +14,7 @@
           <!-- <p class="text-center"><img width="356px" src="https://crustier-twists.000webhostapp.com/imagenes/propuesta.png"
           alt="Logo_restaurante"/></p> -->
           <div class="text-center"> 
-            <h1> POR ELEGIR NUESTROS PRODUCTOS </h1>
+            <h1> GRACIAS POR ELEGIR NUESTROS PRODUCTOS </h1>
           </div>
           <div class="fst-italic">
               <div class="text-center">

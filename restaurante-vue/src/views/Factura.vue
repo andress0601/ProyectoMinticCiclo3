@@ -1,5 +1,5 @@
 <template>
-
+<div>
 
 <head>
     <meta charset="UTF-8" />
@@ -28,7 +28,7 @@
 </table>
 
 
-
+</div>
 
 </template>
 
