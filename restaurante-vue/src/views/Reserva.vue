@@ -41,14 +41,14 @@
   <div class="modal" v-if="showModal">
     <h2>Solicita una reserva</h2>
     <div>
-      <form action="#" method="POST" class="w-full max-w-lg" >
+      <form @submit="AgregarSolicitud" action="#" method="POST" class="w-full max-w-lg" >
   <div class="flex flex-wrap -mx-3 mb-6">
 
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="fecha">
         Fecha
       </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="fecha" type="date">
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" v-model="fecha" type="date">
       <p class="text-red-500 text-xs italic">coloca la fecha que quieres recibir tu pedido</p>
     </div>
 
@@ -57,10 +57,10 @@
         Tipo de Envio
       </label>
       <div class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-50 rounded py-1 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-      <input  type="radio" name="reserva" value="M" > Jornada mañana
+      <input  type="radio" name="reserva" value="M" v-model="Jornada0"> Jornada mañana
       </div>
       <div class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-50 rounded py-1 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-      <input type="radio" name="reserva" value="T" > Jornada Tarde
+      <input type="radio" name="reserva" value="T" v-model="Jornada1"> Jornada Tarde
       </div>
     </div>
 
@@ -69,15 +69,15 @@
         Tipo de Envio
       </label>
       <div class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-50 rounded py-1 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-          <input type="radio" name="reserva" value="C"> Contra entrega
-          <input type="radio" name="reserva" value="T"> Tarjeta debito o credito
+          <input type="radio" name="reserva" value="C" v-model="Pago0"> Contra entrega
+          <input type="radio" name="reserva" value="T" v-model="Pago1"> Tarjeta debito o credito
       </div>
     </div>
     <div class="w-full px-3">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="Direccion">
         Direccion para el domicilio
       </label>
-      <input class="w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" >
+      <input class="w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" v-model="Direccion" >
       <p class="text-gray-600 text-xs italic">El domicilio se entregara a esta direccion</p>
     </div>
   </div>
@@ -86,7 +86,7 @@
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
         Ciudad
       </label>
-        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" v-model="Ciudad">
           <option>Bogotá</option>
         </select>    </div>
     <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -94,7 +94,7 @@
         Localidad
       </label>
       <div class="relative">
-        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" v-model="Localidad">
             <option>Usaquén</option>
             <option>Chapinero</option>
             <option>Santa Fe</option>
@@ -125,7 +125,7 @@
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
         Telefono
       </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text">
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" v-model="Telefono" type="text">
     </div>
   </div>
 </form>
@@ -159,7 +159,7 @@
 
         </div>
       </transition>
-      <button  @click="showModal3 =true" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+      <button type="submit" @click="showModal3 =true" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
       Guardar
       </button>
       </div>
@@ -283,11 +283,11 @@ Solicita tu reserva
   <div class="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
     <p>¡Tu domicilio llegará muy pronto!!</p>
 
-  <!-- <div class="text-black"> -->
+  <div class="text-black">
     <router-link :to="{name:'Factura'}">
       Descargar_factura
       </router-link>
-  <!-- </div> -->
+  </div>
 
         <button  @click="showModal2 =false" class=" bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">
           Cerrar
@@ -322,8 +322,42 @@ export default {
         showModal:false,
         showModal2:false,
         showModal3:false,
+        // Direccion: '',
+        // Fecha: '',
+        // Ciudad: '',
+        // Localidad: '',
+        // Telefono:'',
+        // Jornada: '',
+        // Pago:'',
+        // usuarios:[],
+
+        // select_instances:[]
       }
-    }
+    },
+    // mounted()
+    // {
+    //   // var elems = document.querySelectorAll('select');
+    //   // this.select_instances = M.FormSelect.init(elems, null);
+    // },
+    // methods: {
+    //   AgregarSolicitud()
+    //   {
+    //     var data = {
+    //       Direccion: this.Direccion,
+    //       Fecha: this.Fecha,
+    //       Ciudad: this.Ciudad,
+    //       localidad: this.localidad,
+    //       Telefono: this.Telefono,
+    //       Jornada: this.Jornada1,
+    //       Jornada: this.Jornada0,
+    //       Pago: this.Pago1,
+    //       Pago: this.Pago0,
+    //     };
+    //     this.usuarios.push(data);
+
+    //   }
+    // }
+
 }
 
             
