@@ -179,7 +179,16 @@
       </div>
 
     </div>
+
+    <div>
+      {{info }}
+      <p>Estos son los datos de la BD</p>
+      
+      
+    </div>
   </div>
+
+  
 
   
 </template>
@@ -192,11 +201,14 @@ import ClienteService from "@/services/clientes.js";
 
 export default {
 
+
+
   mounted() {
     this.listaCompras = CompraService.obtenerTodos();
     this.listaProductos = ProductoService.obtenerTodos();
     this.cliente = ClienteService.obtenerCliente();
 
+    
     // if(!this.cliente.nombre){//no tiene permisos, entonces salgase
     //    this.$router.push({name:"login"});//regresese
     // }
@@ -206,6 +218,7 @@ export default {
     
 
     return {
+      
       titulo: "Estructura Lógica-pruebas",
       listaCompras: [],
       listaProductos: [],

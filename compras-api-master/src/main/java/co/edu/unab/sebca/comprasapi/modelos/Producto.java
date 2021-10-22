@@ -32,9 +32,31 @@ public class Producto implements Serializable {
     
     @Column(name = "precio")
     private double precio;
+    
+    @Column(name = "link")
+    private String link;
+    
+    @Column(name = "tipo")
+    private String tipo;
 
     public Long getId() {
         return id;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     public void setId(Long id) {

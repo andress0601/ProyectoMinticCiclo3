@@ -36,6 +36,18 @@
 </main>
 
 
+<div id="app">
+  <h1>Listado de Productos </h1>
+  <div
+    v-for="currency in result"
+    class="currency"
+  >
+    {{ currency.nombre }}:
+    <span class="lighten">
+      <span v-html="currency.precio"></span>{{ currency.tipo }}
+    </span>
+  </div>
+</div>
 
 
 <!-- <main>
@@ -74,39 +86,28 @@
 </template>
 
 <script>
-  import CompraService from "@/services/compras.js";
-  import ProductoService from "@/services/productos.js";
-  import ClienteService from "@/services/clientes.js"
+import axios from "axios";
+export default {
 
-  export default {
-  mounted() {
-    this.listaCompras=CompraService.obtenerTodos();
-    this.listaProductos= ProductoService.obtenerTodos();
-    this.cliente= ClienteService.obtenerCliente();
-    
-  },
-  
-  data() {
+  data () {
     return {
-      titulo:"Estructura Lógica-pruebas",
-      listaCompras:[],
-      listaProductos: [],
-      cliente:{}
-      
-    };
-    
-  },
-   methods: {
-    procesarInformacion(){ 
-     
+      result: null
     }
-   }
-}
+  },
+  /*
+  mounted () {
+    axios
+      .get('http://localhost:8080/producto/todos')
+      .then(response => (this.info = response))
+  }*/
+
+  created() {
+    axios.get("http://localhost:8080/producto/todos").then((result) => {
+      this.result = result.data;
+    })
+  }
+};
 </script>
 
-
-<style scoped>
-
-
-
+<style scoped lang="scss">
 </style>
