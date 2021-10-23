@@ -16,5 +16,9 @@ class ClienteService{
         let id = localStorage.cliente;
         return axios.get(`${this.url}/${id}`);
     }
+    registrarCliente(people){
+        return axios.post(`${this.url}`, people);
+    }
+    
 
 }export default new ClienteService();

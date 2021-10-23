@@ -38,7 +38,7 @@
 
 <div id="app">
   <h1>Listado de Productos </h1>
-  <div
+  <div>
     v-for="currency in result"
     class="currency"
   >

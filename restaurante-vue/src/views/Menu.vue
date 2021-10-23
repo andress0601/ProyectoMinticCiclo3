@@ -146,7 +146,12 @@ export default {
       if(!this.cliente.nombre){
            this.$router.push({name:"login"});
         }
-    }
+    },
+  //   cerrarSesion(){//para no dejar registros de nada
+  //     localStorage.clear();//me limpia todas las varibles que tenía e dicha sesión
+  //     this.$router.push({name:"login"});
+    
+  // }
   }
 };
 </script>

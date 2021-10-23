@@ -6,7 +6,8 @@ import Reserva from '../views/Reserva.vue'
 import CarritoCompras from '../components/CarritoCompras.vue'
 import  login from '../views/login.vue'
 import Factura from '../views/Factura.vue'
-import datasecurity from './proteccion'
+import isAutenticado from './proteccion'
+
 
 
 const routes = [
@@ -24,13 +25,13 @@ const routes = [
     path: '/Carrito',
     name: 'Carrito',
     component: CarritoCompras,//mismo nombre de import
-    beforeEnter: [datasecurity],
+    beforeEnter:[isAutenticado],
   },
   {
     path: '/Reserva',
     name:'Reserva',
     component: Reserva,
-    beforeEnter: [datasecurity],
+    beforeEnter:[isAutenticado],
   },
   {
     path: '/Login',
@@ -41,7 +42,7 @@ const routes = [
     path: '/Factura',
     name: 'Factura',
     component: Factura,
-    beforeEnter: [datasecurity],
+    beforeEnter:[isAutenticado],
   },
 
   // {

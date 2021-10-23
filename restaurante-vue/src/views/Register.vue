@@ -45,7 +45,7 @@
                   cell phone
                 </label>
                 <input
-                  v-model="telefono"
+                  v-model="people.cellPhone"
                   class="
                     w-full
                     px-3
@@ -106,7 +106,7 @@
               type="text"
               class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
               placeholder="address"
-              v-model="direccion"
+              v-model="people.address"
             />
 
             <button
@@ -142,43 +142,56 @@ import ClienteService from "@/services/clientes.js";
 
 export default {
   mounted() {
-    this.cliente = ClienteService.obtenerCliente();
-    this.listado = ClienteService.agregarCliente();
+ 
+    this.cliente = ClienteService.registrarCliente();
   },
 
   data() {
     return {
       people: {
         nombre: "",
+        cellPhone: "",
         usuario: "",
         password: "",
         passwordR: "",
         error: "",
+        address: "",
+        
+
       },
-      direccion: "",
-      telefono: "",
 
     };
   },
   methods: {
     registro() {
-      if (
+       
+         if (
         (this.people.nombre == "") |
         (this.people.password == "") |
         (this.people.passwordR == "") |
         (this.people.usuario == "") |
-        (this.direccion == "") |
-        (this.telefono == "")
+        (this.people.address == "") |
+        (this.people.cellPhone == "")
+        
       ) {
         this.error = alert("Completa correctamente");
       } else if (this.people.password != this.people.passwordR) {
         this.error = alert("Passwords no coinciden");
       } else {
-        this.$router.push({ name: "login" });
-        let ad = this.listado.push(this.people);
-        console.log(ad);
+
+         ClienteService.registrarCliente(this.people).then((respuesta)=>{
+            this.$router.push({name:"login"});
+        }).catch((error)=>{
+            console.log("Error Compra",error);
+        });
+        // this.$router.push({ name: "login" });
+        // let ad = this.listado.push(this.people);
+        // console.log(ad);
       }
-    },
+    
+      
+    }
+    
   },
 };
 </script>

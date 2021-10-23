@@ -34,28 +34,22 @@
                 <div class="flex space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                   <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    aria-current="page" :to="{name:'Menu'}">Menu</router-link>
+                    aria-current="page" to="/">Menu</router-link>
                     
                   <!-- <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     aria-current="page" :to="{name:'Home'}">Home</router-link> -->
                   
-                  
-                  <!-- <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    aria-current="page" :to="{name:'login'}">Login</router-link> -->
-                  
-                  <!-- <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    aria-current="page" :to="{name:'Factura'}">Factura</router-link> -->
-                  
                   <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    aria-current="page" :to="{name:'Reserva'}">Reservación</router-link>
-    
+                    aria-current="page" to="/Reserva">Reservación</router-link>
+                                           <!-- to="/compras" -->
                   <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    aria-current="page" :to="{name:'Carrito'}">Ver Carrito</router-link>
-                  
-                  
+                    aria-current="page" to="/Carrito">Ver Carrito</router-link>
 
                   <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    aria-current="page" :to="{name:'login'}">Login</router-link>
+                    aria-current="page" to="/Login">Login</router-link>
+                    
+                  <a class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                   @click.prevent="cerrarSesion" href="#">Cerrar Sesión</a>  
     
                 </div>
               </div>
@@ -74,6 +68,13 @@
 
 <script>
 export default {
+  methods:{
+    cerrarSesion(){//limpiar sesión cliente
+      localStorage.clear();
+      this.$router.push({name:"login"});
+    
+  }
+  },
   name: "NavBar",
 };
 </script>

@@ -338,13 +338,12 @@ export default {
       }
     },
     
-    methods: {
-    cerrarSesion(){//para no dejar registros de nada
-      localStorage.clear();//me limpia todas las varibles que tenía e dicha sesión
-      this.$router.push({name:"login"});
-    }
-
-}
+//  methods:{
+    // cerrarSesion(){//para no dejar registros de nada
+    //   localStorage.clear();//me limpia todas las varibles que tenía e dicha sesión
+    //   this.$router.push({name:"login"});
+    // }
+//   }
 }
             
 </script>

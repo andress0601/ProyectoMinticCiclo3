@@ -90,8 +90,8 @@ export default {
       ClienteService.validar(this.usuario, this.password).then((respuesta)=>{
 
         if(respuesta.data.nombre){
-          //información básica
-          localStorage.cliente = respuesta.data.id;//diccionario que se mantiene en toda la sesión-para acceder a la información una vez iniciada
+         
+          localStorage.cliente = respuesta.data.id;
 
           this.$router.push({name:"Menu"});
         }else{
