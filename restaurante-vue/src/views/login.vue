@@ -70,11 +70,11 @@
           </div>
         </div>
       </div> -->
+          <h2 id="aviso">{{ error }}</h2>
   </div>
 </div>
          
 
-          <h2 id="aviso">{{ error }}</h2>
         <!-- </div> -->
       </div>
    
@@ -85,27 +85,30 @@
 import ClienteService from "@/services/clientes.js";
 export default {
   methods: {
-    iniciar() {
-      ClienteService.validar(this.usuario, this.password);
+    iniciar(){
+      
+      ClienteService.validar(this.usuario, this.password).then((respuesta)=>{
 
-      this.cliente = ClienteService.obtenerCliente();
+        if(respuesta.data.nombre){
+          //información básica
+          localStorage.cliente = respuesta.data.id;//diccionario que se mantiene en toda la sesión-para acceder a la información una vez iniciada
 
-      if (this.cliente.nombre) {
-        this.$router.push({ name: "Menu" });
-      } else {
-        this.error = alert("datos inválidos");
-      }
-    },
-    registro() {
-      this.$router.push({ name: "register" });
-    },
+          this.$router.push({name:"Menu"});
+        }else{
+          this.error="Datos inválidos";
+        }
+      });
+  
+
+    }
+   
   },
   data() {
     return {
       titulo: "Inicia sesión",
       usuario: "",
       password: "",
-      cliente: {},
+      
       error: "",
     };
   },

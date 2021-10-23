@@ -1,33 +1,20 @@
+import axios from "axios";
+
 class ClienteService{
-    cliente={};
-    listado=[];
+    url="http://localhost:8080/cliente";
 
-    constructor(){
-        this.listado=[
-            {nombre:"Roberto", usuario:"roberto", password:"123"},
-            {nombre:"Stephani", usuario:"stepha", password:"456"},
-            {nombre:"Guillermo", usuario:"guillermo", password:"789"},
+    validar(miUsuario, miPassword){
+        let datos = {
+            usuario: miUsuario,
+            password: miPassword
+        };
+        return axios.post(`${this.url}/validar`, datos);
+    }
 
-        ]
-    }
-    
-    validar(usuario, password){
-        for (const unCliente of this.listado) {
-            if (unCliente.usuario==usuario&&unCliente.password==password) {
-                this.cliente=unCliente;
-                break;
-            }else{
-                this.cliente={}
-                
-            }
-        }
-    }
-    agregarCliente(){
-        return this.listado;
-    }
-    //retorna
     obtenerCliente(){
-        return this.cliente;
+
+        let id = localStorage.cliente;
+        return axios.get(`${this.url}/${id}`);
     }
 
 }export default new ClienteService();

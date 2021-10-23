@@ -316,7 +316,10 @@ Solicita tu reserva
 
 <script>
 
+
 export default {
+ 
+   
     data(){
       return{
         showModal:false,
@@ -334,32 +337,15 @@ export default {
         // select_instances:[]
       }
     },
-    // mounted()
-    // {
-    //   // var elems = document.querySelectorAll('select');
-    //   // this.select_instances = M.FormSelect.init(elems, null);
-    // },
-    // methods: {
-    //   AgregarSolicitud()
-    //   {
-    //     var data = {
-    //       Direccion: this.Direccion,
-    //       Fecha: this.Fecha,
-    //       Ciudad: this.Ciudad,
-    //       localidad: this.localidad,
-    //       Telefono: this.Telefono,
-    //       Jornada: this.Jornada1,
-    //       Jornada: this.Jornada0,
-    //       Pago: this.Pago1,
-    //       Pago: this.Pago0,
-    //     };
-    //     this.usuarios.push(data);
-
-    //   }
-    // }
+    
+    methods: {
+    cerrarSesion(){//para no dejar registros de nada
+      localStorage.clear();//me limpia todas las varibles que tenía e dicha sesión
+      this.$router.push({name:"login"});
+    }
 
 }
-
+}
             
 </script>
 
