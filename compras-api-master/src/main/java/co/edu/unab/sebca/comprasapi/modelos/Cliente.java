@@ -31,17 +31,21 @@ public class Cliente implements Serializable {
     @Column(name = "id", unique = true, nullable = false)
     private Long id;
     
-    @Column(name = "nombre")
-    private String nombre;
+    @Column(name = "Name")
+    private String name;
     
-    @Column(name = "documento")
-    private String documento;
+    @Column(name = "CellPhone")
+    private String cell;
     
-    @Column(name = "usuario")
+    @Column(name = "Usuario")
     private String usuario;
     
     @Column(name = "password")
     private String password;
+    
+     @Column(name = "Address")
+    private String address;
+   
     
     public Long getId() {
         return id;
@@ -52,19 +56,19 @@ public class Cliente implements Serializable {
     }
 
     public String getNombre() {
-        return nombre;
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombre(String name) {
+        this.name = name;
     }
 
-    public String getDocumento() {
-        return documento;
+    public String getCellPhone() {
+        return cell;
     }
 
-    public void setDocumento(String documento) {
-        this.documento = documento;
+    public void setCellPhone(String cell) {
+        this.cell= cell;
     }
 
     public String getUsuario() {
@@ -82,7 +86,15 @@ public class Cliente implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+    
+    public String getAddress() {
+        return address;
+    }
 
+    public void setAddress(String address) {
+        this.address = address;
+    }
+    
     
     
     
