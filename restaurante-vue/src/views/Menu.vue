@@ -64,9 +64,8 @@
       
       class="grid grid-cols-4 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 lg:p-8"> 
       <div 
-      v-for="(unProducto, llave) in listaProductos"
-      v-bind:key="llave"
-      v-bind:value="llave"
+      v-for="unProducto in result"
+      class="unProducto"      
       >
 
       <div v-if="selected === unProducto.tipo ">
@@ -84,7 +83,7 @@
           ${{ unProducto.precio }}
         </p>
         
-        <button  @click.prevent="procesarInformacion(unProducto.id), validarInformacion()" class="bg-gradient-to-r from-green-300 to-blue-400 hover:from-gray-400 hover:to-gray-800 text-gray-800 font-semibold lg:m-4 py-2 px-4 border border-gray-600 rounded shadow">
+        <button  @click.prevent="procesarInformacion(unProducto.id)" class="bg-gradient-to-r from-green-300 to-blue-400 hover:from-gray-400 hover:to-gray-800 text-gray-800 font-semibold lg:m-4 py-2 px-4 border border-gray-600 rounded shadow">
             AÑADIR +
           </button>
 
@@ -100,7 +99,54 @@
   
 </template>
 
+
 <script>
+import CompraService from "@/services/compras.js";
+import axios from "axios";
+export default {
+
+  mounted() {
+    //this.listaProductos= ProductoService.obtenerTodos();
+    this.listaCompras=CompraService.obtenerTodos();
+    //this.cliente= ClienteService.obtenerCliente();
+  },
+
+  data () {
+    return {
+      titulo:"Te damos la bienvenida al sabor de nuestra Tierra",
+      selected: '',
+      result: null,
+      compra: {
+        producto: 0
+      }  
+    }
+  },
+
+
+  created() {
+    axios.get("http://localhost:8080/producto/todos").then((result) => {
+      this.result = result.data;
+    })
+  },
+
+  methods: {
+    procesarInformacion(id){
+      this.compra.producto = id;
+      this.listaCompras.push(this.compra);
+      this.$router.push({name:"Carrito"});
+    },
+
+    validarInformacion(){
+      if(!this.cliente.nombre){
+           this.$router.push({name:"login"});
+        }
+    }
+  }
+};
+
+  
+
+/*
 import NavBar from "@/components/NavBar.vue";
 import ProductoService from "@/services/productos.js";
 import CompraService from "@/services/compras.js";
@@ -149,6 +195,7 @@ export default {
     }
   }
 };
+*/
 </script>
 
 <style scoped>
