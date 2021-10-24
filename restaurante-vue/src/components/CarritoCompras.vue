@@ -180,7 +180,12 @@
 
     </div>
 
-    
+    <div>
+      {{info }}
+      <p>Estos son los datos de la BD</p>
+      
+      
+    </div>
   </div>
 
   
@@ -192,7 +197,7 @@
 import CompraService from "@/services/compras.js";
 import ProductoService from "@/services/productos.js";
 import ClienteService from "@/services/clientes.js";
-import axios from "axios";
+
 
 export default {
 
@@ -204,7 +209,9 @@ export default {
     this.cliente = ClienteService.obtenerCliente();
 
     
-   
+    // if(!this.cliente.nombre){//no tiene permisos, entonces salgase
+    //    this.$router.push({name:"login"});//regresese
+    // }
   },
 
   data() {
@@ -219,22 +226,6 @@ export default {
       
     };
   },
-
-  registrar (idprod,cant,desc,tot){
-    let post = {
-      cantidad: cant,
-      descuento: desc,
-      total: tot,
-      cliente_id: 2,
-      envio_id: 1,
-      producto_id: idprod
-    };
-    axios.post("http://localhost:8080/compra", post).then((result) => {
-    console.log(result);
-  })
-  },
-
-
   methods: {
     procesarInformacion() {
 

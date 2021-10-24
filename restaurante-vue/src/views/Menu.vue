@@ -64,8 +64,9 @@
       
       class="grid grid-cols-4 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 lg:p-8"> 
       <div 
-      v-for="unProducto in result"
-      class="unProducto"      
+      v-for="(unProducto, llave) in listaProductos"
+      v-bind:key="llave"
+      v-bind:value="llave"
       >
 
       <div v-if="selected === unProducto.tipo ">
@@ -99,54 +100,7 @@
   
 </template>
 
-
 <script>
-import CompraService from "@/services/compras.js";
-import axios from "axios";
-export default {
-
-  mounted() {
-    //this.listaProductos= ProductoService.obtenerTodos();
-    this.listaCompras=CompraService.obtenerTodos();
-    //this.cliente= ClienteService.obtenerCliente();
-  },
-
-  data () {
-    return {
-      titulo:"Te damos la bienvenida al sabor de nuestra Tierra",
-      selected: '',
-      result: null,
-      compra: {
-        producto: 0
-      }  
-    }
-  },
-
-
-  created() {
-    axios.get("http://localhost:8080/producto/todos").then((result) => {
-      this.result = result.data;
-    })
-  },
-
-  methods: {
-    procesarInformacion(id){
-      this.compra.producto = id;
-      this.listaCompras.push(this.compra);
-      this.$router.push({name:"Carrito"});
-    },
-
-    validarInformacion(){
-      if(!this.cliente.nombre){
-           this.$router.push({name:"login"});
-        }
-    }
-  }
-};
-
-  
-
-/*
 import NavBar from "@/components/NavBar.vue";
 import ProductoService from "@/services/productos.js";
 import CompraService from "@/services/compras.js";
@@ -166,6 +120,7 @@ export default {
     return {
       listaCompras:[],
       
+      
       titulo:"Te damos la bienvenida al sabor de nuestra Tierra",
       compra: {
         //producto:{},
@@ -184,19 +139,17 @@ export default {
   methods: {
     procesarInformacion(id){
       this.compra.producto = id;
-      this.listaCompras.push(this.compra);
-      this.$router.push({name:"Carrito"});
-    },
-
-    validarInformacion(){
-     
-      if(!this.cliente.nombre){
+       if(this.cliente.id == 0){
            this.$router.push({name:"login"});
         }else{
-          this.$router.to="/Login";
-    
+            
+            this.listaCompras.push(this.compra);
+            this.$router.push({name:"Carrito"});
         }
+      
     },
+
+    
   //   cerrarSesion(){//para no dejar registros de nada
   //     localStorage.clear();//me limpia todas las varibles que tenía e dicha sesión
   //     this.$router.push({name:"login"});
@@ -204,7 +157,6 @@ export default {
   // }
   }
 };
-*/
 </script>
 
 <style scoped>
