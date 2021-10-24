@@ -31,6 +31,9 @@ public class Compra {
     
     @Column(name = "cantidad")
     private int cantidad;
+    
+    @Column(name = "listaProductos")
+    private int prod;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "envio_id", nullable = false)
@@ -67,6 +70,14 @@ public class Compra {
 
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
+    }
+    
+     public int listaProductos() {
+        return prod;
+    }
+
+    public void setlistaProductos(int prod) {
+        this.prod = prod;
     }
 
     public Envio getEnvio() {
