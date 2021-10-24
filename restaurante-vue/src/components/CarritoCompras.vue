@@ -141,7 +141,7 @@
           </span>
 
           <span class="block ...">
-            <button
+            <button @click.prevent="enviarDatosCompra"
               class="
                 bg-white
                 hover:bg-gray-100
@@ -159,7 +159,7 @@
           </span>
 
           <span class="block ...">
-            <button
+            <button @click.prevent="atrasMenu"
               class="
                 bg-white
                 hover:bg-gray-100
@@ -249,7 +249,14 @@ export default {
       let pos = this.listaCompras.indexOf(dato);
       this.listaCompras.splice(pos,1); 
       console.log(pos); 
+    },
+    atrasMenu(){
+       this.$router.push({name:"Menu"});
+    },
+    enviarDatosCompra(){
+      this.$router.push({name:"Reserva"});
     }
+
     }
   }
 ;

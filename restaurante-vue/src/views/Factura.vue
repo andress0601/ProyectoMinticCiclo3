@@ -1,113 +1,207 @@
 <template>
-  <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-
-<main>
-<div>
-<!-- v-for="(unProducto, llave) in listaProductos" v-bind:key="llave" v-bind:value="llave" -->
-    
-  <table class="table-auto" border="-1" v-for="(unProducto, llave) in listaProductos" v-bind:key="llave" v-bind:value="llave">
-    <thead>
-      <tr>
-        <!-- <th>Cliente</th>
-        <th>Producto</th>
-        <th>Cantidad</th>
-        <th>Precio</th>
-        <th>Descuento</th>
-        <th>Total</th> -->
-      </tr>
-    </thead>
-      <tbody v-for="(unaCompra, i) in listaCompras" :key="i">
-          <tr v-if="unaCompra.producto == unProducto.id">
-          <td>{{cliente.nombre}}</td>
-          <td class="bg-emerald-200">{{unProducto.nombre}}</td>
-          <td>0</td>
-          <td>${{unProducto.precio}}</td>
-          <td class="bg-emerald-200">0.0</td>
-          <td>0.0</td>
-          <td class="bg-emerald-200">{{unProducto.precio}}</td>
-          </tr> 
-      </tbody>
-  </table>
-  </div>
-</main>
-
-
-<div id="app">
-  <h1>Listado de Productos </h1>
-  <div>
-    v-for="currency in result"
-    class="currency"
+  <div
+    class="bg-fixed bg-cover bg-center bg-no-repeat h-full w-full lg:p-8"
+    style="
+      background-image: url(https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/restaurante/menu-art.jpg);
+    "
   >
-    {{ currency.nombre }}:
-    <span class="lighten">
-      <span v-html="currency.precio"></span>{{ currency.tipo }}
-    </span>
-  </div>
-</div>
+    <div class="container mx-auto">
+      <div class="min-h-screen flex flex-col justify-center sm:py-2">
+        <div class="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
+          <div class="px-5 py-7 bg-gray-400">
+            
+              <div class="mb-4 md:mr-2 md:mb-0">
+            
+                <label
+                  class="block mb-2 text-sm font-bold text-gray-700"
+                  for="firstName"
+                >
+                  Nombre
+                </label>
+                <h1
+                  class="
+                    w-full
+                    px-3
+                    py-2
+                    text-sm
+                    leading-tight
+                    text-gray-700
+                    border
+                    rounded
+                    shadow
+                    appearance-none
+                    focus:outline-none focus:shadow-outline
+                  "
+                  
+                  required
+                  type="text"
+                  placeholder="usuario"
+                />
+              </div>
+            
+             <div class="md:ml-2">
+                <label
+                  class="block mb-2 text-sm font-bold text-gray-700"
+                  for="lastName"
+                >
+                  CellPhone
+                </label>
+                <h1
+                  
+                  class="
+                    w-full
+                    px-3
+                    py-2
+                    text-sm
+                    leading-tight
+                    text-gray-700
+                    border
+                    rounded
+                    shadow
+                    appearance-none
+                    focus:outline-none focus:shadow-outline
+                  "
+                  
+                />
+              </div>
+            <label class="font-semibold text-sm text-gray-600 pb-1 block"
+              >Produtos</label
+            >
+            <h1
+              required
+              type="text"
+              class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
+             
+            />
+
+             <label class="font-semibold text-sm text-gray-600 pb-1 block"
+              >Cantidad</label
+            >
+            <h1
+              required
+              type="text"
+              class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
+             
+            />
+             <label class="font-semibold text-sm text-gray-600 pb-1 block"
+              >Dirección</label
+            >
+            <h1
+              required
+              type="text"
+              class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
+             
+            />
+             <label class="font-semibold text-sm text-gray-600 pb-1 block"
+              >JornadaEnvio</label
+            >
+            <h1
+              required
+              type="text"
+              class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
+             
+            />
+             <label class="font-semibold text-sm text-gray-600 pb-1 block"
+              >Descuentos</label
+            >
+            <h1
+              required
+              type="text"
+              class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
+             
+            />
+             <label class="font-semibold text-sm text-gray-600 pb-1 block"
+              >Total Compra</label
+            >
+            <h1
+              required
+              type="text"
+              class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
+             
+            />
 
 
-<!-- <main>
-<div>
-<div class="row">
-  <div class="col m12">
-  <table class="table bordered striped" border="-1">
-    <thead>
-      <tr>
-        <th>Direccion</th>
-        <th>Ciudad</th>
-        <th>Localidad</th>
-        <th>Pago</th>
-        <th>Jornada</th>
-        <th>Telefono</th>
-        <th>Fecha</th>
-      </tr>
-    </thead>
-      <tbody>
-          <tr v-for="usuario in usuarios" v-bind:key="usuario">
-          <td>{{usuario.Direccion}} </td>
-          <td>{{usuario.Ciudad}}</td>
-          <td>{{usuario.Localidad}}</td>
-          <td >{{usuario.Pago}}</td>
-          <td>{{usuario.Jornada}}</td>
-          <td>{{usuario.Telefono}}</td>
-          <td>{{usuario.Fecha}}</td>
-          </tr> 
-      </tbody>
-  </table>
-  </div>
-  </div>
-</div>
-</main> -->
+            
 
+            <button
+              @click.prevent="registro"
+              class="
+                lg:p-4
+                bg-gradient-to-r
+                from-green-300
+                to-blue-400
+                hover:from-gray-400 hover:to-gray-800
+                text-gray-800
+                font-semibold
+                lg:m-4
+                py-8
+                px-4
+                border border-gray-600
+                rounded
+                shadow-2x1
+              "
+            >
+              Gracias por tu compra :)
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 >{{ error }}</h2>
+  </div>
 </template>
 
 <script>
-import axios from "axios";
+import ClienteService from "@/services/clientes.js";
+
 export default {
-
-  data () {
-    return {
-      result: null
-    }
+  mounted() {
+ 
+    this.cliente = ClienteService.registrarCliente();
+     
   },
-  /*
-  mounted () {
-    axios
-      .get('http://localhost:8080/producto/todos')
-      .then(response => (this.info = response))
-  }*/
 
-  created() {
-    axios.get("http://localhost:8080/producto/todos").then((result) => {
-      this.result = result.data;
-    })
-  }
+  data() {
+    return {
+      people: {
+        nombre: "",
+        cellPhone: "",
+        usuario: "",
+        password: "",
+        passwordR: "",
+        error: "",
+        address: "",
+        
+
+      },
+
+    };
+  },
+  methods: {
+    registro() {
+  
+
+         ClienteService.registrarCliente(this.people).then((respuesta)=>{
+            this.$router.push({name:"Menu"});
+        }).catch((error)=>{
+            console.log("Error Compra",error);
+        });
+        // this.$router.push({ name: "login" });
+        // let ad = this.listado.push(this.people);
+        // console.log(ad);
+      
+    
+      
+    }
+    
+  },
 };
 </script>
-
-<style scoped lang="scss">
+<style  scoped>
+h2{
+   font-size: 3rem;
+  font-style: initial;
+  color: red;
+}
 </style>
+
