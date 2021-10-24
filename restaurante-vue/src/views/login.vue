@@ -45,11 +45,7 @@
       </div>
       <div class="py-5">
         <div class="grid grid-cols-2 gap-1">
-          <div class="text-center sm:text-left whitespace-nowrap">
-            <router-link  class="transition duration-200 mx-5 px-5 py-4 cursor-pointer font-normal text-sm rounded-lg text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 ring-inset inline-block ml-1" :to="{name:'register'}">
-             Forgot Password!</router-link>
-            
-          </div>
+          
           <div class="text-center sm:text-right  whitespace-nowrap">
             
             <router-link  class="transition duration-200 mx-5 px-5 py-4 cursor-pointer font-normal text-sm rounded-lg text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 ring-inset inline-block ml-1" :to="{name:'register'}">
@@ -70,7 +66,10 @@
           </div>
         </div>
       </div> -->
-          <h2 id="aviso">{{ error }}</h2>
+              
+          <h2 class="border border-gray-600
+              rounded
+              shadow-2x1 text-red-600">{{ error }}</h2>
   </div>
 </div>
          
@@ -115,8 +114,5 @@ export default {
 };
 </script>
 <style>
-#aviso {
-  font-weight: bold;
-  color: #db0d0d;
-}
+
 </style>

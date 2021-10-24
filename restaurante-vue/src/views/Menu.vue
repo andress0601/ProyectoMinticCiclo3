@@ -143,8 +143,12 @@ export default {
     },
 
     validarInformacion(){
+     
       if(!this.cliente.nombre){
            this.$router.push({name:"login"});
+        }else{
+          this.$router.to="/Login";
+    
         }
     },
   //   cerrarSesion(){//para no dejar registros de nada

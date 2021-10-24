@@ -209,9 +209,7 @@ export default {
     this.cliente = ClienteService.obtenerCliente();
 
     
-    // if(!this.cliente.nombre){//no tiene permisos, entonces salgase
-    //    this.$router.push({name:"login"});//regresese
-    // }
+   
   },
 
   data() {
