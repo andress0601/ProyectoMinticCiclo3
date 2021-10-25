@@ -1,9 +1,8 @@
 <template>
   <div class="bg-fondo-restaurante">
-    <div class="grid grid-cols-1 md:grid-cols-2" >
+    <div class="grid grid-cols-1 md:grid-cols-2">
       <div class="flex flex-col">
-        <div class="-my-2 sm:-mx-6 lg:-mx-8"
-        style=margin:25px;>
+        <div class="-my-2 sm:-mx-6 lg:-mx-8" style="margin: 25px">
           <div
             class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8"
           >
@@ -64,53 +63,12 @@
                           shadow
                         "
                       >
-                        Descartar 
+                        Descartar
                       </button>
                     </td>
-                    <!-- columna3 -->
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="inline-flex">
-                        <button
-                          class="
-                            bg-gray-300
-                            hover:bg-gray-400
-                            text-gray-800
-                            font-bold
-                            py-2
-                            px-4
-                            rounded-l
-                          "
-                        >
-                          +
-                        </button>
-                        <button
-                          class="
-                            bg-gray-300
-                            hover:bg-gray-400
-                            text-gray-800
-                            font-bold
-                            py-2
-                            px-4
-                            rounded-r
-                          "
-                        >
-                          -
-                        </button>
-                      </div>
-                    </td>
-
-                    <!-- 
-              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                Admin
-              </td>
-
-              <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
-              </td>
-              -->
                   </tr>
 
-                  <!-- More people... -->
+
                 </tbody>
               </table>
             </div>
@@ -118,8 +76,7 @@
         </div>
       </div>
 
-      <div class="container mx-auto text-gray-800"
-      style=margin:27%;>
+      <div class="container mx-auto text-gray-800" style="margin: 27%">
         <div class="space-y-4 ...">
           <span class="block ...">
             <p class="text-3xl ..." style="color: white">Usuario</p>
@@ -129,7 +86,7 @@
           </span>
           <span class="block ...">
             <p class="text-3xl ..." style="color: white">Costo de domicilio</p>
-            <p class="text-2xl ..." style="color: white">$20.000</p>
+            <p class="text-2xl ..." style="color: white">${{ domicilio }}</p>
           </span>
           <span class="block ...">
             <p class="text-3xl ..." style="color: white">Descuento</p>
@@ -137,11 +94,14 @@
           </span>
           <span class="block ...">
             <p class="text-3xl ..." style="color: white">Total</p>
-            <p class="text-2xl ..." style="color: white">$ {{procesarInformacion()}}</p>
+            <p class="text-2xl ..." style="color: white">
+              $ {{ procesarInformacion() }}
+            </p>
           </span>
 
           <span class="block ...">
             <button
+              @click.prevent="reserva()"
               class="
                 bg-white
                 hover:bg-gray-100
@@ -158,99 +118,87 @@
             </button>
           </span>
 
-          <span class="block ...">
-            <button
-              class="
-                bg-white
-                hover:bg-gray-100
-                text-gray-800
-                font-semibold
-                py-2
-                px-4
-                border border-gray-400
-                rounded
-                shadow
-              "
-            >
-              Atrás
-            </button>
-          </span>
         </div>
       </div>
-
-    </div>
-
-    <div>
-      {{info }}
-      <p>Estos son los datos de la BD</p>
-      
-      
     </div>
   </div>
-
-  
-
-  
 </template>
 
 <script>
+
+
 import CompraService from "@/services/compras.js";
 import ProductoService from "@/services/productos.js";
 import ClienteService from "@/services/clientes.js";
-
+import axios from "axios";
 
 export default {
-
-
 
   mounted() {
     this.listaCompras = CompraService.obtenerTodos();
     this.listaProductos = ProductoService.obtenerTodos();
     this.cliente = ClienteService.obtenerCliente();
-
-    
-    // if(!this.cliente.nombre){//no tiene permisos, entonces salgase
-    //    this.$router.push({name:"login"});//regresese
-    // }
   },
 
   data() {
-    
-
     return {
-      
       titulo: "Estructura Lógica-pruebas",
       listaCompras: [],
       listaProductos: [],
       cliente: {},
-      
+      domicilio: 20000,
     };
   },
   methods: {
     procesarInformacion() {
-
       let subtotal = 0;
-      let domicilio = 20000
 
-      for (var j=0; j< this.listaProductos.length; j++){
-        for (var i=0; i< this.listaCompras.length; i++){
-          if (this.listaCompras[i].producto == this.listaProductos[j].id){
-            //subtotal += domicilio;
+      for (var j = 0; j < this.listaProductos.length; j++) {
+        for (var i = 0; i < this.listaCompras.length; i++) {
+          if (this.listaCompras[i].producto == this.listaProductos[j].id) {
             subtotal += this.listaProductos[j].precio;
           }
         }
       }
 
-      return subtotal;
+      subtotal += this.domicilio;
 
+      return subtotal;
     },
 
-    borrarDato(dato){
+    borrarDato(dato) {
       let pos = this.listaCompras.indexOf(dato);
-      this.listaCompras.splice(pos,1); 
-      console.log(pos); 
+      this.listaCompras.splice(pos, 1);
+      console.log(pos);
+    },
+    
+    recorrido() {
+      let lista = "";
+      for (var i = 0; i < this.listaCompras.length; i++) {
+        lista += this.listaCompras[i].producto + " ";
+      }
+      return lista;
+    },
+
+    validarCompra() {
+      let client = localStorage.cliente;
+      console.log(client);
+      let post = {
+        cantidad: this.listaCompras.length,
+        cliente: client,
+        descuento: 0,
+        total: this.procesarInformacion(),
+        listaProductos: this.recorrido(),
+      };
+      axios.post("http://localhost:8080/compra", post).then((result) => {
+        console.log(result);
+      });
+    },
+
+    reserva(){
+      this.validarCompra();
+      this.$router.push({name:"Reserva"});        
     }
-    }
-  }
-;
+  },
+};
 </script>

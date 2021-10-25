@@ -20,4 +20,5 @@ public interface CompraRepository extends CrudRepository<Compra, Long>{
     
     @Query(value =  "SELECT * FROM compras WHERE cliente_id=?1", nativeQuery = true)
     public ArrayList<Compra> getPorCliente(Long id);
+    
 }

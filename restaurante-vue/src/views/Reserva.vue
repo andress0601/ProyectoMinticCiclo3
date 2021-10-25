@@ -46,38 +46,34 @@
 
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="fecha">
-        Fecha
+        Fecha 
       </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" v-model="fecha" type="date">
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" v-model="reserva.fecha" type="date">
       <p class="text-red-500 text-xs italic">coloca la fecha que quieres recibir tu pedido</p>
     </div>
 
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="envio">
-        Tipo de Envio
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="fecha">
+        Hora
       </label>
-      <div class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-50 rounded py-1 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-      <input  type="radio" name="reserva" value="M" v-model="Jornada0"> Jornada mañana
-      </div>
-      <div class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-50 rounded py-1 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-      <input type="radio" name="reserva" value="T" v-model="Jornada1"> Jornada Tarde
-      </div>
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" v-model="reserva.hora" type="time">
+      <p class="text-red-500 text-xs italic">Recuerda que nuestro horario de atencion es de 11:00am a 4:00pm</p>
     </div>
 
 <div class="w-full px-3">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="envio">
-        Tipo de Envio
+        Medio de pago
       </label>
       <div class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-50 rounded py-1 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-          <input type="radio" name="reserva" value="C" v-model="Pago0"> Contra entrega
-          <input type="radio" name="reserva" value="T" v-model="Pago1"> Tarjeta debito o credito
+          <input type="radio" name="reserva" value="Pago en efectivo" v-model="reserva.tipoPago"> Efectivo
+          <input type="radio" name="reserva" value="Pago con tarjeta" v-model="reserva.tipoPago"> Tarjeta
       </div>
     </div>
     <div class="w-full px-3">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="Direccion">
         Direccion para el domicilio
       </label>
-      <input class="w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" v-model="Direccion" >
+      <input class="w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" v-model="reserva.direccion" >
       <p class="text-gray-600 text-xs italic">El domicilio se entregara a esta direccion</p>
     </div>
   </div>
@@ -86,7 +82,7 @@
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
         Ciudad
       </label>
-        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" v-model="Ciudad">
+        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" v-model="reserva.ciudad">
           <option>Bogotá</option>
         </select>    </div>
     <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -94,7 +90,7 @@
         Localidad
       </label>
       <div class="relative">
-        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" v-model="Localidad">
+        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" v-model="reserva.localidad">
             <option>Usaquén</option>
             <option>Chapinero</option>
             <option>Santa Fe</option>
@@ -125,7 +121,7 @@
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
         Telefono
       </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" v-model="Telefono" type="text">
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" v-model="reserva.telefono" type="text">
     </div>
   </div>
 </form>
@@ -159,193 +155,105 @@
 
         </div>
       </transition>
-      <button type="submit" @click="showModal3 =true" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+      <button type="submit" @click.prevent="showModal3 =true, validarEnvio()" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
       Guardar
       </button>
       </div>
   </div>
 </transition>
-<button  @click="showModal =true" class=" bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+
+<button  @click="showModal=true,producto()" class=" bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
 Solicita tu reserva
 </button>
 </div>
 
 <div>
-<transition name= "fade">
-  <div class="modal-overlay" v-if="showModal2"></div>
-</transition>
-<transition name= "fade">
-  <div class="modal"  v-if="showModal2">
-    <h2>Confirma tu compra </h2>
-    <form class="w-full max-w-lg">   
-  <div class="flex flex-wrap -mx-3 mb-6">
-  <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
-        Horario disponible
-      </label>
-      <div class="relative">
-        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-          <option>11am -12pm</option>
-          <option>12pm -1pm</option>
-          <option>2pm -3pm</option>
-          <option>3pm -4pm</option>
-        </select>
-        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-<svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-        </div>
-      </div>
-  </div>
-      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="envio">
-        Tipo de Envio
-      </label>
-      <div class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-50 rounded py-1 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-          <input type="radio" name="reserva" value="C"> Contra entrega
-      </div>
-      <div class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-50 rounded py-1 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-          <input type="radio" name="reserva" value="T"> Tarjeta debito o credito
-      </div>
-    </div>
-  </div>
-
-  <div class="flex flex-wrap -mx-3 mb-6">
-    <div class="w-full px-3">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-        Direccion para el domicilio
-      </label>
-      <input class="w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" >
-      <p class="text-gray-600 text-xs italic">El domicilio se entregara a esta direccion</p>
-    </div>
-  </div>
-  <div class="flex flex-wrap -mx-3 mb-2">
-    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
-        Ciudad
-      </label>
-        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-          <option>Bogotá</option>
-        </select>    </div>
-    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
-        Localidad
-      </label>
-      <div class="relative">
-        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-            <option>Usaquén</option>
-            <option>Chapinero</option>
-            <option>Santa Fe</option>
-            <option>San Cristobal</option>
-            <option>Usme</option>
-            <option>Tunjuelito</option>
-            <option>Bosa</option>
-            <option>Kennedy</option>
-            <option>Fontibón</option>
-            <option>Engativá</option>
-            <option>Suba</option>
-            <option>Barrios Unidos</option>
-            <option>Teusaquillo</option>
-            <option>Los Mártires</option>
-            <option>Antonio Nariño</option>
-            <option>Puente Aranda</option>
-            <option>La candenlaria</option>
-            <option>Rafael Uribe Uribe</option>
-            <option>Ciudad Bolivar</option>
-            <option>Sumapaz</option>
-        </select>
-        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-        </div>
-      </div>
-    </div>
-    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-        Telefono
-      </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="90210">
-    </div>
-  </div>
-  
-</form>
-    <button  @click="showModal2 =false" class=" bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-    Cerrar
-    </button>
-    <div>
-        <transition name ="fade">
-          <div class="modal-overlay" v-if="showModal3"></div>
-      </transition>
-      <transition name="fade">
-        <div class="modal" v-if="showModal3">
-        
-        <div role="alert">
-  <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
-    GRACIAS POR TU COMPRA
-  </div>
-  <div class="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
-    <p>¡Tu domicilio llegará muy pronto!!</p>
-
-  <div class="text-black">
-    <router-link :to="{name:'Factura'}">
-      Descargar_factura
-      </router-link>
-  </div>
-
-        <button  @click="showModal2 =false" class=" bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">
-          Cerrar
-        </button>
-  </div>
-</div>
-
-        </div>
-      </transition>
-      <button  @click="showModal3 =true" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-      Guardar
-      </button>
-      </div>
-  </div>
-  
-</transition>
-
-<button @click="showModal2 =true" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+<button @click="hora()" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
     Confirma Compra
   </button>
 </div>
 
+<p>{{respuestaRes}}</p>
+<p>{{reserva}}</p>
+<p>{{result}}</p>
 </body>
 
 </template>
 
 <script>
-
-
+  
+  import axios from "axios";
 export default {
- 
-   
-    data(){
-      return{
-        showModal:false,
-        showModal2:false,
-        showModal3:false,
-        // Direccion: '',
-        // Fecha: '',
-        // Ciudad: '',
-        // Localidad: '',
-        // Telefono:'',
-        // Jornada: '',
-        // Pago:'',
-        // usuarios:[],
 
-        // select_instances:[]
-      }
+  mounted() {
+    
+  },
+    
+  data(){
+    return{
+
+      reserva:{
+        fecha: '',
+        hora: '',
+        tipoPago: '',
+        direccion: '',
+        ciudad: '',
+        localidad: '',
+        telefono: '',
+        compraId: 1
+      },
+      
+      showModal:false,
+      showModal2:false,
+      showModal3:false,
+      respuestaRes:'',
+      result: null
+    } 
+  },
+
+  methods: {
+    validarEnvio() {
+      //console.log(this.reserva.fecha)
+      
+      let post = {
+        fecha: this.reserva.fecha,
+        hora: this.reserva.hora,
+        tipoPago: this.reserva.tipoPago,
+        direccion: this.reserva.direccion,
+        ciudad: this.reserva.ciudad,
+        localidad: this.reserva.localidad,
+        telefono: this.reserva.telefono,
+        compraId: this.reserva.compraId
+      };
+      axios.post("http://localhost:8080/envio", post).then((result) => {
+        console.log(result);
+      });
+      
     },
     
-//  methods:{
-    // cerrarSesion(){//para no dejar registros de nada
-    //   localStorage.clear();//me limpia todas las varibles que tenía e dicha sesión
-    //   this.$router.push({name:"login"});
-    // }
-//   }
-}
-            
+    hora(){
+      var hoy = new Date();
+      
+      var hora = hoy.getHours() + ':' + hoy.getMinutes() ;
+      if (hoy.getHours() >=11 && hoy.getHours() <=16){
+        //console.log('estamos disponibles'+ hoy.getHours());
+        this.showModal = true;
+        this.respuestaRes = 'Restaurante disponible ' + hora;  
+      }else{
+        this.respuestaRes = 'Restaurante cerrado ' + hora 
+        
+      }
+    },
+
+    producto(){
+      let resp
+      axios.get("http://localhost:8080/compra/todos").then((result) => {
+      this.result = result.data;
+    });
+    }
+
+  }
+};
 </script>
 
 

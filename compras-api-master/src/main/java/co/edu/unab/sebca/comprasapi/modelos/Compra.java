@@ -32,26 +32,17 @@ public class Compra {
     @Column(name = "cantidad")
     private int cantidad;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "envio_id", nullable = false)
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    private Envio envio;
-    
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "producto_id", nullable = false)
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    private Producto producto;
-    
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "cliente_id", nullable = false)
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    private Cliente cliente;
-    
+    @Column(name = "cliente_id")
+    private int cliente;
+
     @Column(name = "descuento")
     private double descuento;
     
     @Column(name = "total")
     private double total;
+    
+    @Column(name = "listaProductos")
+    private String listaProductos;
 
     public Long getId() {
         return id;
@@ -69,22 +60,6 @@ public class Compra {
         this.cantidad = cantidad;
     }
 
-    public Envio getEnvio() {
-        return envio;
-    }
-
-    public void setEnvio(Envio envio) {
-        this.envio = envio;
-    }
-
-    public Producto getProducto() {
-        return producto;
-    }
-
-    public void setProducto(Producto producto) {
-        this.producto = producto;
-    }
-
     public double getDescuento() {
         return descuento;
     }
@@ -93,11 +68,11 @@ public class Compra {
         this.descuento = descuento;
     }   
 
-    public Cliente getCliente() {
+    public int getCliente() {
         return cliente;
     }
 
-    public void setCliente(Cliente cliente) {
+    public void setCliente(int cliente) {
         this.cliente = cliente;
     }
 
@@ -108,5 +83,13 @@ public class Compra {
     public void setTotal(double total) {
         this.total = total;
     }
-    
+
+    public String getListaProductos() {
+        return listaProductos;
+    }
+
+    public void setListaProductos(String listaProductos) {
+        this.listaProductos = listaProductos;
+    }
+
 }
