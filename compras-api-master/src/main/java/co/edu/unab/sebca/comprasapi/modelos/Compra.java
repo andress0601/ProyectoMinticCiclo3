@@ -31,6 +31,9 @@ public class Compra {
     
     @Column(name = "cantidad")
     private int cantidad;
+    
+    @Column(name = "listaProductos")
+    private int prod;
 
     @Column(name = "cliente_id")
     private int cliente;
@@ -58,6 +61,14 @@ public class Compra {
 
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
+    }
+    
+     public int listaProductos() {
+        return prod;
+    }
+
+    public void setlistaProductos(int prod) {
+        this.prod = prod;
     }
 
     public double getDescuento() {

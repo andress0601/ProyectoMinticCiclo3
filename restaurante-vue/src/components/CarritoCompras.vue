@@ -100,8 +100,12 @@
           </span>
 
           <span class="block ...">
+<<<<<<< HEAD
             <button
               @click.prevent="reserva()"
+=======
+            <button @click.prevent="enviarDatosCompra"
+>>>>>>> 32e8f42428486157e61433d37f128c4f946c0d9f
               class="
                 bg-white
                 hover:bg-gray-100
@@ -118,6 +122,26 @@
             </button>
           </span>
 
+<<<<<<< HEAD
+=======
+          <span class="block ...">
+            <button @click.prevent="atrasMenu"
+              class="
+                bg-white
+                hover:bg-gray-100
+                text-gray-800
+                font-semibold
+                py-2
+                px-4
+                border border-gray-400
+                rounded
+                shadow
+              "
+            >
+              Atrás
+            </button>
+          </span>
+>>>>>>> 32e8f42428486157e61433d37f128c4f946c0d9f
         </div>
       </div>
     </div>
@@ -168,6 +192,7 @@ export default {
 
     borrarDato(dato) {
       let pos = this.listaCompras.indexOf(dato);
+<<<<<<< HEAD
       this.listaCompras.splice(pos, 1);
       console.log(pos);
     },
@@ -198,6 +223,18 @@ export default {
     reserva(){
       this.validarCompra();
       this.$router.push({name:"Reserva"});        
+=======
+      this.listaCompras.splice(pos,1); 
+      console.log(pos); 
+    },
+    atrasMenu(){
+       this.$router.push({name:"Menu"});
+    },
+    enviarDatosCompra(){
+      this.$router.push({name:"Reserva"});
+    }
+
+>>>>>>> 32e8f42428486157e61433d37f128c4f946c0d9f
     }
   },
 };
