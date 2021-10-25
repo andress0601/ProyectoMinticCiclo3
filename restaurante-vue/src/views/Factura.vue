@@ -6,122 +6,152 @@
     "
   >
     <div class="container mx-auto">
-      <div class="min-h-screen flex flex-col justify-center sm:py-2">
+      <div class="min-h-screen flex flex-col justify-center sm:py-4">
         <div class="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
-          <div class="px-16 py-12 bg-white">
-            
-              <div class="mb-6 md:mr-4 md:mb-0">
-            
-                <label
-                  class="block mb-2 text-sm text-left font-bold text-gray-700"
-                  for="firstName"
-                >
-                  Nombre
-                </label>
-                <h1
-                  class="
-                    w-full
-                    px-3
-                    py-2
-                    text-sm
-                    leading-tight
-                    text-gray-700
-                    border
-                    rounded
-                    shadow
-                    appearance-none
-                    focus:outline-none focus:shadow-outline
-                  "
-                  
-                  required
-                  type="text"
-                  placeholder="usuario"
-                />
-              </div>
-            
-             <div class="md:ml-2">
-                <label
-                  class="block mb-2 text-sm font-bold text-gray-700"
-                  for="lastName"
-                >
-                  CellPhone
-                </label>
-                <h1
-                  
-                  class="
-                    w-full
-                    px-3
-                    py-2
-                    text-sm
-                    leading-tight
-                    text-gray-700
-                    border
-                    rounded
-                    shadow
-                    appearance-none
-                    focus:outline-none focus:shadow-outline
-                  "
-                  
-                />
-              </div>
-            <label class="font-semibold text-sm text-gray-600 pb-1 block"
-              >Produtos</label
-            >
-            <h1
-              required
-              type="text"
-              class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
-             
-            />
+          <div class="px-8 py-12 bg-white w-full">
+            <div class="mb-4 md:mr-2 md:mb-0">
+              <h1>------------------------------------------</h1>
+              <p class="italic focus:underline">EL SABOR DE NUESTRA TIERRA</p>
+              <br />
+              <label
+                class="block mb-0 text-sm text-left text-gray-700"
+                for="firstName"
+              >
+                <div class="flex space-x-9 italic">
+                  <div>FECHA: 2021-10-04</div>
+                  <div>HORA: 16:45:30</div>
+                </div>
+              </label>
+            </div>
+            <label
+                class="block mb-0 text-sm text-left text-gray-700"
+                for="firstName"
+              >
+                <div class="flex space-x-4 ">
+                  <div>NIT CLIENTE: </div>
+                  <div>1005650577</div>
+                </div>
+              </label>
+            <label
+                class="block mb-0 text-sm text-left text-gray-700"
+                for="firstName"
+              >
+                  <div>NOMBRE CLIENTE: </div>
+                
+              </label>
+            <label
+                class="block mb-4 text-sm text-left text-gray-700"
+                for="firstName"
+              >
+                  <div>ROBERTO ALVAREZ </div>
+                
+              </label>
+            <label
+                class="block mb-0 text-sm text-left text-gray-700"
+                for="firstName"
+              >
+                  <div>DATOS DE COMPRA</div>
+                  <h1>------------------------------------------</h1>
+              </label>
 
-             <label class="font-semibold text-sm text-gray-600 pb-1 block"
-              >Cantidad</label
-            >
-            <h1
-              required
-              type="text"
-              class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
-             
-            />
-             <label class="font-semibold text-sm text-gray-600 pb-1 block"
-              >Dirección</label
-            >
-            <h1
-              required
-              type="text"
-              class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
-             
-            />
-             <label class="font-semibold text-sm text-gray-600 pb-1 block"
-              >JornadaEnvio</label
-            >
-            <h1
-              required
-              type="text"
-              class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
-             
-            />
-             <label class="font-semibold text-sm text-gray-600 pb-1 block"
-              >Descuentos</label
-            >
-            <h1
-              required
-              type="text"
-              class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
-             
-            />
-             <label class="font-semibold text-sm text-gray-600 pb-1 block"
-              >Total Compra</label
-            >
-            <h1
-              required
-              type="text"
-              class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
-             
-            />
-
-
+            <label
+                class="block mb-0 text-sm text-left text-gray-700"
+                for="firstName"
+              >
+          
+                  <div>LISTA PRODUCTOS { </div>
+                  
+              </label>
+            <label
+                class="block mb-0 text-sm text-left text-gray-700"
+                for="firstName"
+              >
+                <div class="flex space-x-3 ">
+                  <div>PRODUCTO : </div>
+                  <div>PANDEYUCAS</div>
+                  <div>CANT: 2</div>
+                </div>
+              </label>
+            <label
+                class="block mb-0 text-sm text-left text-gray-700"
+                for="firstName"
+              >
+                <div class="flex space-x-3 ">
+                  <div>PRODUCTO : </div>
+                  <div>FILETE PESCADO</div>
+                   <div>CANT: 6</div>
+                </div>
+              </label>
             
+            <label
+                class="block mb-2 text-sm text-left text-gray-700"
+                for="firstName"
+              >
+          
+                  <div>} </div>
+                  
+              </label>
+              <label
+                class="block mb-0 text-sm text-left text-gray-700"
+                for="firstName"
+              >
+                <div class="flex space-x-3 ">
+                  <div>MEDIO DE PAGO: </div>
+                  <div>EFECTIVO</div>
+                   
+                </div>
+              </label>
+
+              <label
+                class="block mb-4 text-sm text-left text-gray-700"
+                for="firstName"
+              >
+                <div class="flex space-x-3 ">
+                  <div>DIRECCION DOMICILIO: </div>
+                  <div>CRA32 #123-12</div>
+                   
+                </div>
+              </label>
+              <label
+                class="block mb-2 text-sm text-left text-gray-700"
+                for="firstName"
+              >
+                  <h1>------------------------------------------</h1>
+              </label>
+              <label
+                class="block mb-0 text-sm text-left text-gray-700"
+                for="firstName"
+              >
+                <div class="flex space-x-3 ">
+                  <div>DESCUENTO : </div>
+                  <div> $23500</div>
+                   
+                </div>
+              </label>
+              <label
+                class="block mb-2 text-sm text-left text-gray-700"
+                for="firstName"
+              >
+                <div class="flex space-x-3 ">
+                  <div>TOTAL A PAGAR : </div>
+                  <div>$235000</div>
+                
+                </div>
+              </label>
+
+               <label
+                class="block mb-4 text-sm text-left text-gray-700"
+                for="firstName"
+              >
+                  <h1>------------------------------------------</h1>
+              </label>
+
+               <label
+                class="block mb-4 text-sm text-left text-gray-700 italic"
+                
+              >
+                  <h1> HA SIDO UN GUSTO ATENDERTE</h1>
+              </label>
 
             <button
               @click.prevent="registro"
@@ -141,13 +171,13 @@
                 shadow-2x1
               "
             >
-              Gracias por tu compra :)
+              GRACIAS 
             </button>
           </div>
         </div>
       </div>
     </div>
-    <h2 >{{ error }}</h2>
+    <h2>{{ error }}</h2>
   </div>
 </template>
 
@@ -156,9 +186,7 @@ import ClienteService from "@/services/clientes.js";
 
 export default {
   mounted() {
- 
     this.cliente = ClienteService.registrarCliente();
-     
   },
 
   data() {
@@ -171,35 +199,28 @@ export default {
         passwordR: "",
         error: "",
         address: "",
-        
-
       },
-
     };
   },
   methods: {
     registro() {
-  
-
-         ClienteService.registrarCliente(this.people).then((respuesta)=>{
-            this.$router.push({name:"Menu"});
-        }).catch((error)=>{
-            console.log("Error Compra",error);
+      ClienteService.registrarCliente(this.people)
+        .then((respuesta) => {
+          this.$router.push({ name: "Menu" });
+        })
+        .catch((error) => {
+          console.log("Error Compra", error);
         });
-        // this.$router.push({ name: "login" });
-        // let ad = this.listado.push(this.people);
-        // console.log(ad);
-      
-    
-      
-    }
-    
+      // this.$router.push({ name: "login" });
+      // let ad = this.listado.push(this.people);
+      // console.log(ad);
+    },
   },
 };
 </script>
 <style  scoped>
-h2{
-   font-size: 3rem;
+h2 {
+  font-size: 3rem;
   font-style: initial;
   color: red;
 }

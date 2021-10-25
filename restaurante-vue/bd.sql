@@ -51,11 +51,12 @@ INSERT IGNORE INTO `productos` (`id`, `link`, `nombre`, `precio`, `tipo`) VALUES
 	(45, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/COSTE%c3%91A.jpg', 'Cerveza Costeña (und)', 65000, '(Bebidas)'),
 	(46, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/poker-x400.png', 'Cerveza Poker', 3000, '(Bebidas)'),
 	(47, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/heineken.jpg', 'Heineken ', 2500, '(Bebidas)'),
-	(48, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/combo%203.png', 'Combo fritanga mediana (Chorizo,Rellena,Lomo de Cerdo,Costillitas de Cerdo,Chicharrón,Papa criolla y Maduro)', 36900, '(Especiales)'),
-	(49, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/champagne%20vino%20espumoso%2073000.png', 'Champagne vino espumoso ideal para tus momentos especiales)', 73000, '(Especiales)'),
-	(50, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/champa%c3%b1a.jpg', 'Champagne smirnoft (Champagne con sabores a naranja y lulo)', 45000, '(Especiales)'),
-	(51, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/Champa%c3%b1a%20Francesa%20Moet%20&%20chandon%20Brut%20imperial.png', 'Champaña Francesa Moet & chandon Brut imperial', 273900, '(Especiales)'),
-	(52, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/maipo%20vino%20tinto%20cabernet%20sauvignon.jpg', 'Maipo Vino tinto cabernet sauvignon', 73000, '(Especiales)'),
-	(53, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/vino-tinto-montes-classic-series-merlot.jpg', 'Vino tinto merlot', 57000, '(Especiales)'),
-	(54, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/Vinos-blanco_santa%20helena.jpg', 'Vino blanco Santa Helena', 38650, '(Especiales)');	
+	(48, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/combo%201.jpg', 'Combo plato típico (Carne Oreada,Cabro,Rellena,Chorizo,Pepitoria,Arepa,Yuca y Ensalada)',43900, '(Especiales)'),
+	(49, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/combo%203.png', 'Combo fritanga mediana (Chorizo,Rellena,Lomo de Cerdo,Costillitas de Cerdo,Chicharrón,Papa criolla y Maduro)', 36900, '(Especiales)'),
+	(50, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/champagne%20vino%20espumoso%2073000.png', 'Champagne vino espumoso ideal para tus momentos especiales)', 73000, '(Especiales)'),
+	(51, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/champa%c3%b1a.jpg', 'Champagne smirnoft (Champagne con sabores a naranja y lulo)', 45000, '(Especiales)'),
+	(52, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/Champa%c3%b1a%20Francesa%20Moet%20&%20chandon%20Brut%20imperial.png', 'Champaña Francesa Moet & chandon Brut imperial', 273900, '(Especiales)'),
+	(53, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/maipo%20vino%20tinto%20cabernet%20sauvignon.jpg', 'Maipo Vino tinto cabernet sauvignon', 73000, '(Especiales)'),
+	(54, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/vino-tinto-montes-classic-series-merlot.jpg', 'Vino tinto merlot', 57000, '(Especiales)'),
+	(55, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/Vinos-blanco_santa%20helena.jpg', 'Vino blanco Santa Helena', 38650, '(Especiales)');	
 
