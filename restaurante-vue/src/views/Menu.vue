@@ -60,6 +60,7 @@
     <!--<span>Seleccionado: {{ selected }}</span>
     <p class="text-3xl ...">{{ selected }}</p>
     -->
+    
     <div
       
       class="grid grid-cols-4 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 lg:p-8"> 
@@ -110,11 +111,16 @@ export default {
     NavBar,
   },
   mounted() {
-    this.listaProductos= ProductoService.obtenerTodos();
+    // this.listaProductos= ProductoService.obtenerTodos();
     this.listaCompras=CompraService.obtenerTodos();
     this.cliente= ClienteService.obtenerCliente();
     
-    
+    ProductoService.obtenerTodos().then((respuesta)=>{
+          this.listaProductos=respuesta.data;
+      }).catch((error)=>{
+          console.log("Error Productos",error);
+      });
+  
   },
   data() {
     return {

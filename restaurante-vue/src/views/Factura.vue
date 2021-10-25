@@ -8,12 +8,12 @@
     <div class="container mx-auto">
       <div class="min-h-screen flex flex-col justify-center sm:py-2">
         <div class="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
-          <div class="px-5 py-7 bg-gray-400">
+          <div class="px-16 py-12 bg-white">
             
-              <div class="mb-4 md:mr-2 md:mb-0">
+              <div class="mb-6 md:mr-4 md:mb-0">
             
                 <label
-                  class="block mb-2 text-sm font-bold text-gray-700"
+                  class="block mb-2 text-sm text-left font-bold text-gray-700"
                   for="firstName"
                 >
                   Nombre
