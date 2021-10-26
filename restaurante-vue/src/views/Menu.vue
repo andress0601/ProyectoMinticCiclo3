@@ -69,7 +69,12 @@
       v-bind:key="llave"
       v-bind:value="llave"
       >
-
+      <!--
+        daba error joven, creo que falta la llave-por ello deje la ahí
+      <div 
+      v-for="unProducto in info"
+      >
+      -->
       <div v-if="selected === unProducto.tipo ">
         <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8 ">
           <img :src="unProducto.link" alt="" class="w-full h-full object-center object-cover group-hover:opacity-75">
@@ -103,9 +108,10 @@
 
 <script>
 import NavBar from "@/components/NavBar.vue";
-import ProductoService from "@/services/productos.js";
 import CompraService from "@/services/compras.js";
+import ProductoService from "@/services/productos.js";
 import ClienteService from "@/services/clientes.js";
+// import axios from "axios"
 export default {
   components: {
     NavBar,
@@ -114,6 +120,9 @@ export default {
     // this.listaProductos= ProductoService.obtenerTodos();
     this.listaCompras=CompraService.obtenerTodos();
     this.cliente= ClienteService.obtenerCliente();
+
+    //  axios.get('http://localhost:8080/producto/todos')
+    //  .then(response => (this.info = response.data));
     
     ProductoService.obtenerTodos().then((respuesta)=>{
           this.listaProductos=respuesta.data;
@@ -136,6 +145,7 @@ export default {
         producto: 0,
        
       },
+      info: {},
       selected: '',
       listaProductos: [],
       seleccion: -1,

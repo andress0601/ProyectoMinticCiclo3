@@ -1,4 +1,3 @@
-
 import { createRouter, createWebHistory } from 'vue-router'
 import Menu from '../views/Menu.vue'//coloco la ruta
 import Register from '../views/Register.vue'
@@ -7,7 +6,7 @@ import CarritoCompras from '../components/CarritoCompras.vue'
 import  login from '../views/login.vue'
 import Factura from '../views/Factura.vue'
 import isAutenticado from './proteccion'
-
+import Ventas from '../components/Ventas.vue'
 
 
 const routes = [
@@ -45,6 +44,13 @@ const routes = [
     beforeEnter:[isAutenticado],
   },
 
+  {
+    path: '/Ventas',
+    name: 'Ventas',
+    component: Ventas,
+    
+  },
+
   // {
   //   path: '/compras',
   //   name: 'Compras',
@@ -62,5 +68,3 @@ const router = createRouter({
 })
 
 export default router
-
-

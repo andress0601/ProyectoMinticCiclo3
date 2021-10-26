@@ -1,7 +1,8 @@
 <template>
 
     <nav class="bg-gray-800" >
-        <div class="max-w-7xl mx-auto  ">
+        
+       <div class="max-w-7xl mx-auto  ">
           <div class="relative flex items-center justify-between h-16">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
               <!-- Mobile menu button-->
@@ -35,33 +36,34 @@
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                   <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     aria-current="page" to="/">Menu</router-link>
-                    
-                  <!-- <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    aria-current="page" :to="{name:'Home'}">Home</router-link> -->
-                  
-                  <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    aria-current="page" to="/Reserva">Reservación</router-link>
-                                           <!-- to="/compras" -->
+
                   <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     aria-current="page" to="/Carrito">Ver Carrito</router-link>
 
                   <router-link class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    aria-current="page" to="/Login">Login</router-link>
+                    aria-current="page" to="/Login">Login</router-link> 
+                  
                     
-                  <a class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                   @click.prevent="cerrarSesion" href="#">Cerrar Sesión</a>  
+                  
     
                 </div>
               </div>
             </div>
-            
+
+          <div class="flex justify-center md:block">   
+                   
           
-            <div class="ml-3 relative">
-              
-            </div>
+          <a class=" text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                   @click.prevent="cerrarSesion" href="#">Cerrar Sesión</a>  
+          
+        </div>
+            
           </div>
-        </div> 
-    
+
+          
+
+        </div>  
+       
               
       </nav> 
 </template>
@@ -72,8 +74,7 @@ export default {
     cerrarSesion(){//limpiar sesión cliente
       localStorage.clear();
       this.$router.push({name:"login"});
-    
-  }
+    }
   },
   name: "NavBar",
 };

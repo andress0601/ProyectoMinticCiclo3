@@ -8,6 +8,7 @@ package co.edu.unab.sebca.comprasapi.controladores;
 import co.edu.unab.sebca.comprasapi.modelos.Compra;
 import co.edu.unab.sebca.comprasapi.servicios.CompraService;
 import java.util.ArrayList;
+import  java.util.Optional ;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,6 +29,11 @@ public class CompraController {
     
     @Autowired
     private CompraService compraService;
+    
+    @GetMapping( path = "/{id}")
+    public Optional <Compra> getPorId(@PathVariable("id") Long id){
+        return compraService.getPorId(id);
+    }
     
     @GetMapping(path = "/todos")
     public ArrayList<Compra> getTodos(){

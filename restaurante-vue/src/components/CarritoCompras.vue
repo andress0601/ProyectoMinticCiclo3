@@ -15,6 +15,7 @@
               "
             >
               <table
+                
                 class="min-w-full divide-y divide-gray-200"
                 v-for="(unProducto, llave) in listaProductos"
                 v-bind:key="llave"
@@ -37,8 +38,9 @@
                           />
                         </div>
                         <div class="ml-4">
-                          <div class="text-sm font-medium text-gray-900">
-                            {{ unProducto.nombre }}
+                          <div v-if="(unProducto.nombre.length>10)" class="text-sm font-medium text-gray-900">
+                            
+                            {{ unProducto.nombre.substring(0,15)+".." }}
                           </div>
                           <div class="text-sm text-gray-500">
                             ${{ unProducto.precio }}
@@ -79,12 +81,6 @@
       <div class="container mx-auto text-gray-800" style="margin: 27%">
         <div class="space-y-4 ...">
           <span class="block ...">
-            <p class="text-3xl ..." style="color: white">Usuario</p>
-            <p class="text-2xl ..." style="color: white">
-              {{ cliente.nombre }}
-            </p>
-          </span>
-          <span class="block ...">
             <p class="text-3xl ..." style="color: white">Costo de domicilio</p>
             <p class="text-2xl ..." style="color: white">${{ domicilio }}</p>
           </span>
@@ -122,25 +118,6 @@
             </button>
           </span>
 
-
-          <span class="block ...">
-            <button @click.prevent="atrasMenu"
-              class="
-                bg-white
-                hover:bg-gray-100
-                text-gray-800
-                font-semibold
-                py-2
-                px-4
-                border border-gray-400
-                rounded
-                shadow
-              "
-            >
-              Atrás
-            </button>
-          </span>
-
         </div>
       </div>
     </div>
@@ -148,21 +125,24 @@
 </template>
 
 <script>
-
-
 import CompraService from "@/services/compras.js";
 import ProductoService from "@/services/productos.js";
 import ClienteService from "@/services/clientes.js";
 import axios from "axios";
-
 export default {
-
   mounted() {
     this.listaCompras = CompraService.obtenerTodos();
-    this.listaProductos = ProductoService.obtenerTodos();
     this.cliente = ClienteService.obtenerCliente();
+    axios
+    .get('http://localhost:8080/producto/todos')
+    .then(response => (this.info = response.data));
+    
+     ProductoService.obtenerTodos().then((respuesta)=>{
+            this.listaProductos=respuesta.data;
+        }).catch((error)=>{
+            console.log("Error Productos",error);
+        });
   },
-
   data() {
     return {
       titulo: "Estructura Lógica-pruebas",
@@ -170,28 +150,24 @@ export default {
       listaProductos: [],
       cliente: {},
       domicilio: 20000,
+      info: []
     };
   },
   methods: {
     procesarInformacion() {
       let subtotal = 0;
-
-      for (var j = 0; j < this.listaProductos.length; j++) {
+      for (var j = 0; j < this.info.length; j++) {
         for (var i = 0; i < this.listaCompras.length; i++) {
-          if (this.listaCompras[i].producto == this.listaProductos[j].id) {
-            subtotal += this.listaProductos[j].precio;
+          if (this.listaCompras[i].producto == this.info[j].id) {
+            subtotal += this.info[j].precio;
           }
         }
       }
-
       subtotal += this.domicilio;
-
       return subtotal;
     },
-
     borrarDato(dato) {
       let pos = this.listaCompras.indexOf(dato);
-
       this.listaCompras.splice(pos, 1);
       console.log(pos);
     },
@@ -203,7 +179,6 @@ export default {
       }
       return lista;
     },
-
     validarCompra() {
       let client = localStorage.cliente;
       console.log(client);
@@ -218,21 +193,13 @@ export default {
         console.log(result);
       });
     },
-
     reserva(){
       this.validarCompra();
       this.$router.push({name:"Reserva"});        
-
       this.listaCompras.splice(pos,1); 
       console.log(pos); 
     },
-    atrasMenu(){
-       this.$router.push({name:"Menu"});
-    },
     
-
-
     }
   };
-
 </script>

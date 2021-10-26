@@ -63,8 +63,6 @@ public class Compra {
     
      
 
-    
-
     public double getDescuento() {
         return descuento;
     }
