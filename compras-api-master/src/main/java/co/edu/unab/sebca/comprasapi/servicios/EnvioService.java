@@ -34,4 +34,8 @@ public class EnvioService {
         return envioRepository.save(miEnvio);
     }
     
+    public ArrayList<Envio> getPorCompra(Long id){
+        return envioRepository.getPorCompra(id);
+    }
+    
 }

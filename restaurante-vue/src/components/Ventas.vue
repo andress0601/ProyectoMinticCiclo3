@@ -8,12 +8,13 @@
   <div class="grid grid-rows-3 grid-flow-col gap-4">
     
     <!--Grid1-->
+    
     <div class="row-span-3 ...">
       <div class="w-full max-w-xs">
   <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
     <div class="mb-4">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
-        Ciudad
+        Ciudad 
       </label>
       <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" v-model="envio.ciudad" type="text" >
     </div>
@@ -34,7 +35,7 @@
 
     <div class="mb-4">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
-        Fecha
+        Fecha 
       </label>
       <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" v-model="envio.fecha" type="text" >
     </div>
@@ -141,42 +142,62 @@
     </div>
 
   </div>
-  {{compra.listaProductos}}
-  <button @click.prevent="prueba()">hola </button>
+ 
+  <button
+              @click.prevent="dataVentas(),prueba()"
+              class="
+                lg:p-4
+                bg-gradient-to-r
+                from-green-300
+                to-blue-400
+                hover:from-gray-400 hover:to-gray-800
+                text-gray-800
+                font-semibold
+                lg:m-4
+                py-8
+                px-4
+                border border-gray-600
+                rounded
+                shadow-2x1
+              "
+            >
+              GRACIAS 
+            </button>
+  
   </div>
   
 </template>
 
 <script>
-import ClienteService from "@/services/clientes.js";
 import axios from "axios";
+import MetodosService from "../services/metodos.js";
+import ProductoService from "../services/productos.js";
 export default {
   mounted() {
-    //let idCompra = this.envio.compra_id;
-    //this.cliente = ClienteService.registrarCliente();
-    axios
-        .get('http://localhost:8080/envio/12' )
-        .then(response => (this.envio = response.data));
-     axios
-        .get(`http://localhost:8080/compra/4`)
-        .then(response => (this.compra = response.data));
-     //this.traerCompra();
-     axios.get('http://localhost:8080/producto/19')
-        .then(response => (this.producto = response.data));
-     
-//    this.variable();    
+    MetodosService.metodoUno().then((respuesta)=>{
+          this.compras=respuesta.data;
+      }).catch((error)=>{
+          console.log("Error Compras",error);
+      });
+      
+      MetodosService.metodoUno().then((respuesta)=>{
+          this.lProductos=respuesta.data;
+      }).catch((error)=>{
+          console.log("Error Compras",error);
+      });
+    
   },
   data() {
     return {
-      envio:{
-        ciudad:'',
-        compra_id:0,
-        direccion:'',
+     envio:{
         fecha:'',
         hora:'',
+        tipoPago:'',
+        direccion:'',
+        ciudad:'',
         localidad:'',
         telefono:'',
-        tipoPago:''
+        compra_id:0
       },
       compra:{
         cantidad:'',
@@ -187,31 +208,65 @@ export default {
       },
       producto:{
         nombre:''
-      }
+      },
+      compras:{},
+      envios:{},
+      producto:[],
+      lProductos:[]
     };
   },
   methods: {
-    
-    traerCompra(){
-      let idCompra = this.envio.compra_id;
+    dataVentas(){
+      this.compra = this.compras[this.compras.length-1];
+      let idcompra = this.compras[this.compras.length-1].id;
+      
       axios
-        .get(`http://localhost:8080/compra/${idCompra}`)
-        .then(response => (this.compra = response.data));
-    },
-    traerEnvio(){
-      axios
-        .get('http://localhost:8080/todos/envio/' )
-        .then(response => (this.envio = response.data));
+        .get(`http://localhost:8080/envio/cliente/${idcompra}` )
+        .then(response => (this.envios = response.data));
+
     },
     prueba(){
+      
+      this.envio.fecha = this.envios[0].fecha ;
+      this.envio.hora =this.envios[0].hora ;
+      this.envio.tipoPago = this.envios[0].tipoPago ;
+      this.envio.direccion =this.envios[0].direccion ;
+      this.envio.ciudad =this.envios[0].ciudad ;
+      this.envio.localidad =this.envios[0].localidad ;
+      this.envio.telefono =this.envios[0].telefono ;
+      this.envio.compra_id = this.envios[0].compra_id ;
+
       let arr = this.compra.listaProductos.split(' ');
       
       for (var j = 0; j < arr.length-1; j++) {
-        return(arr[j]);
+        this.producto.push(arr[j]);
+        //return(arr[j]);
       }
+      this.otroMas(); 
+    },
+
+    otroMas(){
+      for (var j = 0; j < this.lProductos; j++) {
+        console.log(this.lProductos[j])
+      }
+      /*
+      let subtotal = '';
+      for (var j = 0; j < this.lProductos; j++) {
+        for (var i = 0; i < this.producto.length; i++) {
+          if (this.lProductos[j].id == this.producto[i]) {
+            subtotal += this.info[j].nombre + ' ';
+          }
+        }
+      }
+      console.log(subtotal);
+      */
     }
-    //var eje= this.info[this.info.length-1].id;
+
+
+    
   },
+
+
 };
 </script>
 <style  scoped>

@@ -5,7 +5,10 @@
  */
 package co.edu.unab.sebca.comprasapi.repositorios;
 
+import co.edu.unab.sebca.comprasapi.modelos.Compra;
 import co.edu.unab.sebca.comprasapi.modelos.Envio;
+import java.util.ArrayList;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -15,5 +18,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface EnvioRepository extends CrudRepository<Envio, Long>{
-    
+    @Query(value =  "SELECT * FROM envios WHERE compra_id=?1", nativeQuery = true)
+    public ArrayList<Envio> getPorCompra(Long id);
 }

@@ -5,6 +5,7 @@
  */
 package co.edu.unab.sebca.comprasapi.controladores;
 
+
 import co.edu.unab.sebca.comprasapi.modelos.Envio;
 import co.edu.unab.sebca.comprasapi.servicios.EnvioService;
 import java.util.ArrayList;
@@ -38,6 +39,11 @@ public class EnvioController {
     @GetMapping(path = "/todos")
     public ArrayList<Envio> getTodos(){
         return envioService.getTodos();
+    }
+    
+    @GetMapping(path = "/cliente/{id}")
+    public ArrayList<Envio> getPorCompra(@PathVariable("id") Long id){
+        return envioService.getPorCompra(id);
     }
     
     @PostMapping()
