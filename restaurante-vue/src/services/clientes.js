@@ -16,6 +16,15 @@ class ClienteService{
         let id = localStorage.cliente;
         return axios.get(`${this.url}/${id}`);
     }
+    
+   
+   
+    regresarCliente(nombre){
+
+        let id = localStorage.cliente;
+        return axios.get(`${this.url}/${id}`, nombre);
+    }
+   
     registrarCliente(people){
         return axios.post(`${this.url}`, people);
     }

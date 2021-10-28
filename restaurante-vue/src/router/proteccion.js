@@ -1,4 +1,4 @@
-const isAutenticado= (origen, destino, accion)=>{
+const isSecurity= (origen, destino, accion)=>{
 
     if (localStorage.cliente) {
         accion();
@@ -7,6 +7,6 @@ const isAutenticado= (origen, destino, accion)=>{
     }
 
 };
-export default isAutenticado;
+export default isSecurity;
 
 // Guard

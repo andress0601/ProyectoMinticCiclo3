@@ -185,6 +185,8 @@ export default {
       }).catch((error)=>{
           console.log("Error Compras",error);
       });
+
+      
     
   },
   data() {

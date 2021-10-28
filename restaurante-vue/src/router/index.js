@@ -5,7 +5,7 @@ import Reserva from '../views/Reserva.vue'
 import CarritoCompras from '../components/CarritoCompras.vue'
 import  login from '../views/login.vue'
 import Factura from '../views/Factura.vue'
-import isAutenticado from './proteccion'
+import isSecurity from './proteccion'
 import Ventas from '../components/Ventas.vue'
 
 
@@ -24,13 +24,13 @@ const routes = [
     path: '/Carrito',
     name: 'Carrito',
     component: CarritoCompras,//mismo nombre de import
-    beforeEnter:[isAutenticado],
+    beforeEnter:[isSecurity],
   },
   {
     path: '/Reserva',
     name:'Reserva',
     component: Reserva,
-    beforeEnter:[isAutenticado],
+    beforeEnter:[isSecurity],
   },
   {
     path: '/Login',
@@ -41,7 +41,7 @@ const routes = [
     path: '/Factura',
     name: 'Factura',
     component: Factura,
-    beforeEnter:[isAutenticado],
+    beforeEnter:[isSecurity],
   },
 
   {

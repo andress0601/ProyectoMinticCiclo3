@@ -467,8 +467,10 @@ export default {
     variable(){
       var eje= this.info[this.info.length-1].id;
       var eje2= this.cliente.address;
+      var eje3= this.cliente.cellPhone;
       this.reserva.compraid = eje;
       this.reserva.direccion = eje2;
+      this.reserva.telefono = eje3;
     }
   }
 };
