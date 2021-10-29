@@ -413,7 +413,8 @@ export default {
         ciudad: '',
         localidad: '',
         telefono: '',
-        compraid: ''
+        compraid: '',
+        username: ''
       },
       cliente: {},
       
@@ -468,9 +469,11 @@ export default {
       var eje= this.info[this.info.length-1].id;
       var eje2= this.cliente.address;
       var eje3= this.cliente.cellPhone;
+      var eje4= this.cliente.usuario;
       this.reserva.compraid = eje;
       this.reserva.direccion = eje2;
       this.reserva.telefono = eje3;
+      this.reserva.username = eje4;
     }
   }
 };

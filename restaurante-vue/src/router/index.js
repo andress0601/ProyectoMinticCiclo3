@@ -48,6 +48,7 @@ const routes = [
     path: '/Ventas',
     name: 'Ventas',
     component: Ventas,
+    beforeEnter:[isSecurity],
     
   },
 

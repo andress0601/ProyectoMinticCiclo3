@@ -86,12 +86,12 @@
           </span>
           <span class="block ...">
             <p class="text-3xl ..." style="color: white">Descuento</p>
-            <p class="text-2xl ..." style="color: white">$0.0</p>
+            <p class="text-2xl ..." style="color: white">${{ aplicarDescuento() }}</p>
           </span>
           <span class="block ...">
             <p class="text-3xl ..." style="color: white">Total</p>
             <p class="text-2xl ..." style="color: white">
-              $ {{ procesarInformacion() }}
+              $ {{ total() }}
             </p>
           </span>
 
@@ -122,6 +122,7 @@
       </div>
     </div>
   </div>
+  <!-- <p>{{aplicarDescuento()}}</p> -->
 </template>
 
 <script>
@@ -156,6 +157,7 @@ export default {
   methods: {
     procesarInformacion() {
       let subtotal = 0;
+      
       for (var j = 0; j < this.info.length; j++) {
         for (var i = 0; i < this.listaCompras.length; i++) {
           if (this.listaCompras[i].producto == this.info[j].id) {
@@ -166,6 +168,22 @@ export default {
       subtotal += this.domicilio;
       return subtotal;
     },
+    aplicarDescuento(){
+      let ahorro = 0;
+      let subtotal = this.procesarInformacion();
+      if (subtotal >= 100000) {
+        ahorro += subtotal * 0.1;
+      }else{
+        ahorro = 0;
+      }
+      return ahorro
+    },
+    total(){
+      let total = this.procesarInformacion();
+        total -= this.aplicarDescuento();
+      return total
+    },
+
     borrarDato(dato) {
       let pos = this.listaCompras.indexOf(dato);
       this.listaCompras.splice(pos, 1);
@@ -185,7 +203,7 @@ export default {
       let post = {
         cantidad: this.listaCompras.length,
         cliente: client,
-        descuento: 0,
+        descuento: this.aplicarDescuento(),
         total: this.procesarInformacion(),
         listaProductos: this.recorrido(),
       };
