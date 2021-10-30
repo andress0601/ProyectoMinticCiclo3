@@ -1,5 +1,5 @@
 class CompraService{
-    url="http://localhost:8080/compra";
+    url="http://132.145.74.80:8080/compra";
     Compras=[];
 
     constructor(){

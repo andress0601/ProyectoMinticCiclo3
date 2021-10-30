@@ -1,7 +1,7 @@
 import axios from "axios";
 
 class ProductoService{
-    url="http://localhost:8080/producto";
+    url="http://132.145.74.80:8080/producto";
     // Spring boot
 
     obtenerTodos(){

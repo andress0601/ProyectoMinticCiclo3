@@ -1,7 +1,7 @@
 import axios from "axios";
 
 class ClienteService{
-    url="http://localhost:8080/cliente";
+    url="http://132.145.74.80:8080/cliente";
 
     validar(miUsuario, miPassword){
         let datos = {

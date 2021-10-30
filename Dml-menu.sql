@@ -42,7 +42,7 @@ INSERT INTO productos (`id`, `link`, `nombre`, `precio`, `tipo`) VALUES
 	(42, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/aguila-cerveza.png', 'Cerveza Aguila', 3000, '(Bebidas)'),
 	(43, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/black.png', 'Club Colombia  black', 7000, '(Bebidas)'),
 	(44, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/dorada.png', 'Club Colombia Dorada', 7000, '(Bebidas)'),
-	(45, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/COSTE%c3%91A.jpg', 'Cerveza Costeña (und)', 65000, '(Bebidas)'),
+	(45, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/COSTE%c3%91A.jpg', 'Cerveza Costeña ', 65000, '(Bebidas)'),
 	(46, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/poker-x400.png', 'Cerveza Poker', 3000, '(Bebidas)'),
 	(47, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/bebidas/heineken.jpg', 'Heineken ', 2500, '(Bebidas)'),
 	(48, 'https://el-sabor-de-nuestra-tierra.000webhostapp.com/imagenes/Especiales/combo%201.jpg', 'Combo plato típico (Carne Oreada,Cabro,Rellena,Chorizo,Pepitoria,Arepa,Yuca y Ensalada)',43900, '(Especiales)'),
