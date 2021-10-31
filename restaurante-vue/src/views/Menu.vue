@@ -63,7 +63,7 @@
     
     <div
       
-      class="grid grid-cols-4 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 lg:p-8"> 
+      class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 lg:p-8"> 
       <div 
       v-for="(unProducto, llave) in listaProductos"
       v-bind:key="llave"
@@ -121,8 +121,7 @@ export default {
     this.listaCompras=CompraService.obtenerTodos();
     this.cliente= ClienteService.obtenerCliente();
 
-    //  axios.get('http://localhost:8080/producto/todos')
-    //  .then(response => (this.info = response.data));
+    
     
     ProductoService.obtenerTodos().then((respuesta)=>{
           this.listaProductos=respuesta.data;

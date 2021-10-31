@@ -259,11 +259,11 @@ export default {
       let idcompra = this.compras[this.compras.length - 1].id;
 
       axios
-        .get(`http://localhost:8080/envio/cliente/${idcompra}`)
+        .get(`http://132.145.74.80:8080/envio/cliente/${idcompra}`)
         .then((response) => (this.envios = response.data));
 
       axios
-        .get(`http://localhost:8080/producto/todos`)
+        .get(`http://132.145.74.80:8080/producto/todos`)
         .then((response) => (this.lProductos = response.data));
     },
 

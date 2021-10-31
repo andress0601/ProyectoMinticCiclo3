@@ -2,7 +2,7 @@ import axios from "axios";
 
 class MetodosService{
     url="http://132.145.74.80:8080";
-    
+   // http://132.145.74.80:8080
     metodoUno(){
         let id = localStorage.cliente;
 

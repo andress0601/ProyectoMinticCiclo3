@@ -1,3 +1,4 @@
+
 <template>
 
 <body
@@ -38,16 +39,59 @@
       </div>
     </header>
 
-    <div>
-      <transition name="fade">
-        <div class="modal-overlay" v-if="showModal"></div>
-      </transition>
+    <div class="grid grid-cols-1 md:grid-cols-2">
+      
+      <div>
 
-      <transition name="fade">
-        <div class="modal" v-if="showModal">
-          
-          <div>
-            <form
+        <div>
+     
+      
+     
+
+      <button
+        @click="showModal = true, variable()"
+        class="
+          bg-transparent
+          hover:bg-blue-500
+          text-blue-700
+          font-semibold
+          hover:text-white
+          py-2
+          px-4
+          border border-blue-500
+          hover:border-transparent
+          rounded
+        "
+      >
+        Solicita tu reserva
+      </button>
+    </div>
+
+    <div>
+      <button
+        @click="hora(), variable()"
+        class="
+          bg-transparent
+          hover:bg-blue-500
+          text-blue-700
+          font-semibold
+          hover:text-white
+          py-2
+          px-4
+          border border-blue-500
+          hover:border-transparent
+          rounded
+        "
+      >
+        Confirma Compra
+      </button>
+    </div>
+
+      </div>
+
+      <div v-if="showModal">
+        
+        <form
               @submit="AgregarSolicitud"
               action="#"
               method="POST"
@@ -260,29 +304,12 @@
       <input class="disabled appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" v-model="reserva.compraid" type="text" disabled>
     </div>
   </div> 
-            </form>
-          </div>
-          <button
-            @click="showModal = false"
-            class="
-              bg-transparent
-              hover:bg-blue-500
-              text-blue-700
-              font-semibold
-              hover:text-white
-              py-2
-              px-4
-              border border-blue-500
-              hover:border-transparent
-              rounded
-            "
-          >
-            Cerrar
-          </button>
-          <div>
-            <transition name="fade">
-              <div class="modal-overlay" v-if="showModal3"></div>
-            </transition>
+        </form>
+
+        <!-- ventana de factura -->
+
+        <div>
+            
             <transition name="fade">
               <div class="modal" v-if="showModal3">
                 <div role="alert">
@@ -323,12 +350,14 @@
                       "
                     >
                       Cerrar
+                      
                     </button>
                   </div>
                 </div>
               </div>
             </transition>
-            <button
+</div>
+        <button
               type="submit"
               @click.prevent="(showModal3 = true), validarEnvio()"
               class="
@@ -346,48 +375,11 @@
             >
               Guardar
             </button>
-          </div>
-        </div>
-      </transition>
 
-      <button
-        @click="showModal = true, variable()"
-        class="
-          bg-transparent
-          hover:bg-blue-500
-          text-blue-700
-          font-semibold
-          hover:text-white
-          py-2
-          px-4
-          border border-blue-500
-          hover:border-transparent
-          rounded
-        "
-      >
-        Solicita tu reserva
-      </button>
+      </div>
     </div>
 
-    <div>
-      <button
-        @click="hora(), variable()"
-        class="
-          bg-transparent
-          hover:bg-blue-500
-          text-blue-700
-          font-semibold
-          hover:text-white
-          py-2
-          px-4
-          border border-blue-500
-          hover:border-transparent
-          rounded
-        "
-      >
-        Confirma Compra
-      </button>
-    </div>
+    
 
     <p>{{ respuestaRes }}</p>
 </body>
@@ -415,6 +407,7 @@ export default {
         telefono: '',
         compraid: '',
         username: ''
+        
       },
       cliente: {},
       
@@ -428,10 +421,10 @@ export default {
   methods: {
     llamadaProducto(){
       let id = localStorage.cliente;
-      axios.get(`http://localhost:8080/compra/cliente/${id}`).then((result) => {
+      axios.get(`http://132.145.74.80:8080/compra/cliente/${id}`).then((result) => {
         this.info = result.data;
       });
-      axios.get(`http://localhost:8080/cliente/${id}`).then((result) => {
+      axios.get(`http://132.145.74.80:8080/cliente/${id}`).then((result) => {
         this.cliente = result.data;
       });
     },
@@ -447,7 +440,7 @@ export default {
         telefono: this.reserva.telefono,
         compra_id: this.reserva.compraid
       };
-      axios.post("http://localhost:8080/envio", post).then((result) => {
+      axios.post("http://132.145.74.80:8080/envio", post).then((result) => {
         console.log(result);
       });
       

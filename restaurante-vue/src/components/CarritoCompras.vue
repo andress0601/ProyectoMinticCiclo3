@@ -135,7 +135,7 @@ export default {
     this.listaCompras = CompraService.obtenerTodos();
     this.cliente = ClienteService.obtenerCliente();
     axios
-    .get('http://localhost:8080/producto/todos')
+    .get('http://132.145.74.80:8080/producto/todos')
     .then(response => (this.info = response.data));
     
      ProductoService.obtenerTodos().then((respuesta)=>{
@@ -207,7 +207,7 @@ export default {
         total: this.procesarInformacion(),
         listaProductos: this.recorrido(),
       };
-      axios.post("http://localhost:8080/compra", post).then((result) => {
+      axios.post("http://132.145.74.80:8080/compra", post).then((result) => {
         console.log(result);
       });
     },
